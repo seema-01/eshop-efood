@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
+
+    <!-- Boostrap Css -->
+    <link rel="stylesheet" href="Assets/css/bootstrap.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Open Sans|Oleo Script Swash Caps">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom Css -->
+    <!-- <link rel="stylesheet" href="Assets/css/style.css"> -->
+
+
+    <!-- <link rel="stylesheet" href="Assets/css/teststyle.css"> -->
+    <title>Home | eShop - Online Food ordering</title>
+</head>
+
+<body>
+    <style>
+        .popular-item {
+            position: relative;
+        }
+        
+        .popular-item .swiper {
+            width: 100%;
+            height: 10%;
+        }
+        
+        .popular-item .swiper-slide img {
+            display: block;
+            max-width: 100%;
+            height: 100%;
+        }
+        
+        .popular-item .card {
+            background-color: #f1f1f1;
+            text-align: left;
+            border-style: none;
+            font-size: 0.938rem;
+        }
+        
+        .popular-item .card img {
+            max-width: 100%;
+            height: 150px;
+        }
+        
+        .popular-item .icon {
+            font-size: 0.6rem;
+            color: #f27e3a;
+            position: relative;
+        }
+        
+        .popular-item .price {
+            background-color: #f27e3a;
+            color: white;
+            padding: 5px;
+            margin-left: 15px;
+        }
+        
+        .popular-item .btn-order {
+            background-color: #fdeade;
+            font-weight: bold;
+            border-radius: 5px;
+            color: #f27e3a;
+            padding-left: 10px;
+            font-size: 0.6rem;
+        }
+        
+        .popular-item .next {
+            transform: rotate(900deg);
+            position: relative;
+        }
+        
+        .popular-item .prev {
+            position: relative;
+        }
+        
+        .svg-left {
+            max-width: 60%;
+        }
+        
+        .prev {
+            background: none;
+            border: none;
+            border-radius: 100%;
+        }
+        
+        .next {
+            background: none;
+            border: none;
+            border-radius: 100%;
+            font-size: 10px;
+        }
+        
+        .svg-right {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            max-width: 60%;
+        }
+    </style>
+
+
+
+    <div class="container-fluid row">
+        <div class="col-2 mt-5">
+            <button class="prev mt-5 d-none d-sm-none d-md-block"><img src="Assets/svg/left-right.svg"
+                    class=" svg-left mx-5 mt-4" alt=""></button>
+
+        </div>
+        <div class="col-8 text-center">
+            <div class=" popular-item position-relative ">
+                <h3 class="text-center " style=" font-family: 'Oleo Script Swash Caps';position:relative; ">
+                    Popular item</h3>
+                <div class="swiper popular-item ">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide ">
+                            <div class="card" style="border:none">
+                                <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+                                <div class="card-body">
+
+                                    <div class="card-body ">
+                                        <div class="col">
+
+                                            <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                                        </div>
+                                        <div class="col">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h6 class="card-title text-left ">Spicy Meatballs
+                                                </div>
+                                                <div class="col-4">
+                                                    <span class="price ">$99</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                                example text to build on the card title and make up the bulk
+                                                of the card's content.</small></p>
+                                        </div>
+                                        <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="card ">
+                                <img src="Assets/img/05.png " class="card-img-top " alt="... " width="100% ">
+                                <div class="card-body ">
+                                    <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+                                    <h5 class="card-title text-left ">Spicy Meatballs <span class="price ">$99</span>
+                                    </h5>
+                                    <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                                    <a href="#/ " class="btn btn-order ">Order Now</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="card ">
+                                <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+                                <div class="card-body ">
+                                    <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+                                    <h5 class="card-title text-left ">Spicy Meatballs <span class="price ">$99</span>
+                                    </h5>
+                                    <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                                    <a href="#/ " class="btn btn-order ">Order Now</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="card ">
+                                <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+                                <div class="card-body ">
+                                    <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+                                    <h5 class="card-title text-left ">Spicy Meatballs <span class="price ">$99</span>
+                                    </h5>
+                                    <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                                    <a href="#/ " class="btn btn-order ">Order Now</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="card ">
+                                <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+                                <div class="card-body ">
+                                    <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+                                    <h5 class="card-title text-left ">Spicy Meatballs <span class="price ">$99</span>
+                                    </h5>
+                                    <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                                    <a href="#/ " class="btn btn-order ">Order Now</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="col-2 mt-5">
+            <button class="next mt-5 d-none d-sm-none d-md-block"><img src="Assets/svg/left-right.svg"
+                    class=" svg-right mx-5 mt-4" alt=""></button>
+
+        </div>
+    </div>
+
+
+    <br><br>
+
+
+    <div class="container">
+        <div class="card col-md-3">
+
+            <div class="card-body">
+                <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <div class="col">
+
+                        <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-8">
+                                <h6 class="card-title text-left ">Spicy Meatballs
+                            </div>
+                            <div class="col-4">
+                                <span class="price ">$99</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                            example text to build on the card title and make up the bulk
+                            of the card's content.</small></p>
+                    </div>
+                    <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- Scripts -->
+
+<!-- Jquery CDN -->
+<script src=" https://code.jquery.com/jquery-3.6.0.js " integrity=" sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
+
+<!-- Boostrap JavaScript -->
+<script src=" Assets/js/bootstrap.js "></script>
+
+<!-- Swiper JS -->
+<script src=" https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+<!-- Custom Js -->
+<script src=" Assets/js/main.js "></script>
+
+<!-- End Scripts -->

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
+
+    <!-- Boostrap Css -->
+    <link rel="stylesheet" href="Assets/css/bootstrap.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Open Sans|Oleo Script Swash Caps">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom Css -->
+    <!-- <link rel="stylesheet" href="Assets/css/style.css"> -->
+
+
+    <link rel="stylesheet" href="Assets/css/teststyle.css">
+    <title>Home | eShop - Online Food ordering</title>
+</head>
+
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid ">
+            <img src="Assets/img/logo.PNG" alt="">
+
+            <button class="btn d-block d-lg-none  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <div class="icon-container collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="input-container">
+                                <i class="fas fa-map-marker-alt icon"></i>
+                                <input class="input-field" type="text" placeholder="Enter Your Address" name="usrnm">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary"><i class="fas fa-search icon-search"></i> Find Food</button>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Login
+                        </button>
+
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#signup">
+                            Sign Up
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+    </script>
+    <!-- mobile navbar -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Eshop</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+            <nav class="navbar navbar-light teal lighten-4">
+
+                <!-- Navbar brand -->
+
+
+                <!-- Collapse button -->
+
+                <!-- Collapsible content -->
+                <div>
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link waves-effect waves-light active" href="#">Find your location <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Login
+                            </button>
+
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#signup">
+                                Sign Up
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <div class="row filters">
+                                <div class="col-md-2">
+
+                                </div>
+                                <div class="col-md-8 " style="margin-top: 80px;">
+                                    <button class="btn"><i class="fas fa-sliders-h"></i> Filters</button>
+                                    <button class="btn">Rating 4.0+</button>
+
+                                    <button class="btn">Safe and Hygienic</button>
+
+                                    <button class="btn">Pure Veg</button>
+
+                                    <button class="btn"><i class="fas fa-arrows-alt-v"></i> Delivery Time</button>
+                                    <button class="btn">Great Offers</button>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+        </div>
+    </div>
+    <!-- End Header -->
+
+
+
+
+
+
+    <!-- Login -->
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="efood.html" method="GET">
+                        <input type="text" name="" class="form-control" id="">
+
+                        <br>
+                        <button class="btn btn-primary col-12 " type="submit"> Send OTP</button>
+                    </form>
+                    <hr>
+                    <button class="btn col-12">Continue with Email</button>
+                    <button class="btn col-12">Continue with Google</button>
+                </div>
+                <div class="modal-footer text-left">
+                    New to eFood ? <label for="" style="color:#f96120">Create account</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Login -->
+
+
+    <!-- Sign up Modal -->
+    <div class="modal fade " id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="" class="form-control" id="" placeholder="full name">
+                    <br>
+                    <input type="email" name="" class="form-control" id="" placeholder="email">
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked" style="font-size: 11px;">
+                            i agree to e food <span class="text-danger">Terms of service. Privacy Policy </span>and
+                            <span class="text-danger">Content Policies</span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary col-12 "> Send OTP</button>
+                    <hr>
+
+                    <button class="btn col-12">Continue with Google</button>
+                </div>
+                <div class="modal-footer text-left">
+                    New to eFood ? <label for="" style="color:#f96120">Create account</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Login -->
+
+
+    <!-- Body container -->
+    <style>
+        .body-container {
+            background-image: url('Assets/img/backround.png');
+        }
+    </style>
+
+    <div class="container-fluid body-container .d-none .d-md-block .d-lg-none">
+        <div class="row filters d-none d-sm-none d-md-block d-lg-block ">
+
+            <div class="col-8 " style="">
+                <button class="btn"><i class="fas fa-sliders-h"></i> Filters</button>
+                <button class="btn">Rating 4.0+</button>
+
+                <button class="btn">Safe and Hygienic</button>
+
+                <button class="btn">Pure Veg</button>
+
+                <button class="btn"><i class="fas fa-arrows-alt-v"></i> Delivery Time</button>
+                <button class="btn">Great Offers</button>
+
+            </div>
+        </div>
+        <div class="row loved-dish">
+            <div class="col-md-6 f-dish">
+                <h6><b>#1 Most loved dish</b></h6>
+                <h1>LAMB STEAK</h1>
+                <h1><b>PATATO</b></h1>
+                <h4>Quench the Hunger</h4>
+                <p class="col-sm-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ipsum, auctor quis sagittis felis risus, a odio. Amet ante nulla sem mauris.</p>
+
+
+            </div>
+            <div class="col-md-6">
+                <img src="Assets/img/center01.png" class="dish  d-none d-sm-none d-md-block d-lg-block" alt="" width="50%">
+            </div>
+        </div>
+
+        <!-- Swiper -->
+        <div class="col-md-2">
+
+        </div>
+
+        <div class="row">
+            <div class=" col-md-4 col-sm-12 col-lg-4 mt-5">
+                <h5 class="Restaurants-name"><i class="fas fa-map-marker-alt " style="margin-right:10px;"></i> Food Land
+                </h5>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-2">
+                        <button class="prev d-none d-sm-none d-md-block"><img src="Assets/svg/left-right.svg" class=" svg-left mx-5 mt-4" alt=""></button>
+                    </div>
+                    <div class="col-8">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="Assets/img/center05.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="Assets/img/center06.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="Assets/img/center07.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="Assets/img/center08.png" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class=""></div>
+                            <div class=""></div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-2 d-none d-sm-none d-md-block ">
+                        <button class="next"><img src="Assets/svg/left-right.svg" class="svg-right mx-5 mt-4" alt=""></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- End body container -->
+
+
+
+    <!-- Discount Cards -->
+
+    <div class="container ">
+        <div class='row  discount-cards align-items-center'>
+
+            <div class="col  card-space">
+
+                <div class="card discount-item">
+                    <div class="card-body">
+
+                        <img src="Assets/img/01.png" alt="" style="margin-bottom: 35px;">
+                        <div class="position-relative">
+                            <div class="position-absolute start-0 bottom-0">
+                                <div class="discount ">15</div> <span class="off ">%</span><span class="off-text ">Off</span></div>
+
+                        </div>
+
+                        <label style="font-weight: bold; ">Grey vegs</label>
+                        <br>
+                        <div class="offer-end-days ">6 days remaining</div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col  card-space">
+
+                <div class="card discount-item">
+                    <div class="card-body">
+
+                        <img src="Assets/img/02.png" alt="" style="margin-bottom: 35px;">
+                        <div class="position-relative">
+                            <div class="position-absolute start-0 bottom-0">
+                                <div class="discount ">15</div> <span class="off ">%</span><span class="off-text ">Off</span></div>
+
+                        </div>
+
+                        <label style="font-weight: bold; ">Grey vegs</label>
+                        <br>
+                        <div class="offer-end-days ">6 days remaining</div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col  card-space">
+
+                <div class="card discount-item">
+                    <div class="card-body">
+
+                        <img src="Assets/img/03.png" alt="" style="margin-bottom: 35px;">
+                        <div class="position-relative">
+                            <div class="position-absolute start-0 bottom-0">
+                                <div class="discount ">15</div> <span class="off ">%</span><span class="off-text ">Off</span></div>
+
+                        </div>
+
+                        <label style="font-weight: bold; ">Grey vegs</label>
+                        <br>
+                        <div class="offer-end-days ">6 days remaining</div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col  card-space">
+
+                <div class="card discount-item">
+                    <div class="card-body">
+
+                        <img src="Assets/img/04.png" alt="" style="margin-bottom: 35px;">
+                        <div class="position-relative">
+                            <div class="position-absolute start-0 bottom-0">
+                                <div class="discount ">15</div> <span class="off ">%</span><span class="off-text ">Off</span></div>
+
+                        </div>
+
+                        <label style="font-weight: bold; ">Grey vegs</label>
+                        <br>
+                        <div class="offer-end-days ">6 days remaining</div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Discount End Cards -->
+
+
+
+
+
+    <!-- How doeas work -->
+
+    <div class="-fluid how-does-works">
+        <div class="position-relative ">
+            <div class="position-absolute top-0 start-0 barries " style="z-index: 5; ">
+                <img class="cookie " src="Assets/img/8.png " alt=" " width="20% ">
+            </div>
+        </div>
+
+        <div class="container ">
+            <h3 class="text-center " style="padding-bottom: 50px; color: #f27e3a; font-family: 'Oleo Script Swash Caps'; ">How does works</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col text-center">
+                                <img src="Assets/svg/selectLocation.svg" alt="" width="60%">
+                            </div>
+                            <div class="col text-center  mt-3">
+                                <h6 class="fw-bold">Select Lcation</h6>
+                            </div>
+                            <div class="col text-center text-muted">
+                                <small>Select location where your
+                                            food will be delivered</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col text-center">
+                                <img src="Assets/svg/chooseOrder.svg" alt="" width="60%">
+                            </div>
+                            <div class="col text-center mt-3">
+                                <h6 class="fw-bold ">Choose order</h6>
+                            </div>
+                            <div class="col text-center text-muted">
+                                <small>check ours hundres of menu to pick your favourite food</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col text-center">
+                                <img src="Assets/svg/payAdvance.svg" alt="" width="60%">
+                            </div>
+                            <div class="col text-center ">
+                                <h6 class="fw-bold">Pay Advance</h6>
+                            </div>
+                            <div class="col text-center text-muted">
+                                <small>its quick,simple.select several method</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col text-center mt-4">
+
+                                <img src="Assets/svg/enjoyMeal.svg" alt="" width="60%">
+                            </div>
+                            <div class="col text-center mt-2">
+                                <h6 class="fw-bold">Enjoy meals</h6>
+                            </div>
+                            <div class="col text-center text-muted">
+                                <small>Foods made delivered directly to your time</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!--End How doeas work -->
+
+
+
+
+    <!-- Popular Item -->
+    <div class="popular-item">
+        <h3 class="text-center mt-5" style=" font-family: 'Oleo Script Swash Caps';position:relative; ">
+            Popular item</h3>
+        <div class="container swiper popular-item  ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card ">
+                        <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+
+                        <div class="card-body">
+
+                            <div class="col">
+
+                                <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h6 class="card-title text-left ">Spicy Meatballs
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="price ">$99</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                            </div>
+                            <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card ">
+                        <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+
+                        <div class="card-body">
+
+                            <div class="col">
+
+                                <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h6 class="card-title text-left ">Spicy Meatballs
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="price ">$99</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                            </div>
+                            <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card ">
+                        <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+
+                        <div class="card-body">
+
+                            <div class="col">
+
+                                <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h6 class="card-title text-left ">Spicy Meatballs
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="price ">$99</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                            </div>
+                            <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card ">
+                        <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+
+                        <div class="card-body">
+
+                            <div class="col">
+
+                                <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h6 class="card-title text-left ">Spicy Meatballs
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="price ">$99</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                            </div>
+                            <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card ">
+                        <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+
+                        <div class="card-body">
+
+                            <div class="col">
+
+                                <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h6 class="card-title text-left ">Spicy Meatballs
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="price ">$99</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                            </div>
+                            <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card ">
+                        <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+
+                        <div class="card-body">
+
+                            <div class="col">
+
+                                <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h6 class="card-title text-left ">Spicy Meatballs
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="price ">$99</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                            </div>
+                            <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card ">
+                        <img src="Assets/img/05.png " class="card-img-top " alt="... ">
+
+                        <div class="card-body">
+
+                            <div class="col">
+
+                                <div class="icon "> <i class="fas fa-star "></i> <i class="fas fa-star "></i> <i class="fas fa-star-half-alt "></i> <i class="far fa-star "></i></div>
+
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h6 class="card-title text-left ">Spicy Meatballs
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="price ">$99</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <p class="card-text " style="color: #b2b2b2; "><small>Some quick
+                                            example text to build on the card title and make up the bulk
+                                            of the card's content.</small></p>
+                            </div>
+                            <div class="col"> <a href="#/ " class="btn btn-order ">Order Now</a></div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- End Popular Item -->
+
+
+
+
+
+    <!-- Featured Restaurants -->
+    <div class="container featured-restaurants ">
+        <h3 class="text-center " style="margin-top: 50px; font-family: 'Oleo Script Swash Caps'; ">
+            Featured Restaurnt</h3>
+
+        <div class="row ">
+            <div class="col-md-3 ">
+                <div class="card text-left ">
+
+                    <div class="position-relative ">
+
+                        <div class="position-absolute top-0 start-0 mt-2 mx-1 "> <span class="off "><i class="fas fa-tag "></i> 20% Off</span>
+                            <span class="fast "><i class="fas fa-clock "></i> Fast </span></div>
+                        <img src="Assets/img/10.png " class="card-img-top " alt="... ">
+                    </div>
+
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-md-4 col-sm-2 col-xs-2 "> <img src="Assets/svg/logo01.svg " alt=" "></div>
+                            <div class="col-md-8 col-sm-10 col-xs-10 ">
+                                <div class="row ">
+                                    <h5 class="card-title col-12 "> Food World </h5>
+                                </div>
+                                <div class="row "> <i class="fas fa-star "><small> 46</small></i></div>
+
+                            </div>
+                        </div>
+                        <div class="row col-8 "> <a href="#/ " class="open-tomorrow ">Opens Tomorrow</a></div>
+
+                        <div class="off-fast ">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="card text-left ">
+
+                    <img src="Assets/img/11.png " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-md-4 col-sm-2 col-xs-2 "> <img src="Assets/svg/logo02.svg " alt=" "></div>
+                            <div class="col-md-8 col-sm-10 col-xs-10 ">
+                                <div class="col ">
+                                    <h5 class="card-title col-12 "> Food land </h5>
+                                </div>
+                                <div class="col "> <i class="fas fa-star "><small> 46</small></i></div>
+
+                            </div>
+                        </div>
+                        <div class="row col-8 "> <a href="#/ " class="open-now ">Opens now</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="card text-left ">
+
+                    <img src="Assets/img/12.png " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-md-4 col-sm-2 col-xs-2 "> <img src="Assets/svg/logo03.svg " alt=" "></div>
+                            <div class="col-md-8 col-sm-10 col-xs-10 ">
+                                <div class="row ">
+                                    <h5 class="card-title col-12 "> Food store </h5>
+                                </div>
+                                <div class="row "> <i class="fas fa-star "><small> 10</small></i></div>
+
+                            </div>
+                        </div>
+                        <div class="row col-8 "> <a href="#/ " class="open-now ">Opens now</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="card text-left ">
+
+                    <img src="Assets/img/13.png " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-md-4 col-sm-2 col-xs-2 "> <img src="Assets/svg/logo04.svg " alt=" "></div>
+                            <div class="col-md-8 col-sm-10 col-xs-10 ">
+                                <div class="row ">
+                                    <h5 class="card-title col-12 "> Food vila </h5>
+                                </div>
+                                <div class="row "> <i class="fas fa-star "><small> 46</small></i></div>
+
+                            </div>
+                        </div>
+                        <div class="row col-8 "> <a href="#/ " class="open-tomorrow ">Opens Tomorrow</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row " style="margin-top: 10px; ">
+            <div class="col-md-3 ">
+                <div class="card text-left ">
+
+                    <img src="Assets/img/14.png " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-md-4 col-sm-2 col-xs-2 "> <img src="Assets/svg/logo05.svg " alt=" "></div>
+                            <div class="col-md-8 col-sm-10 col-xs-10 ">
+                                <div class="row ">
+                                    <h5 class="card-title col-12 "> Food land </h5>
+                                </div>
+                                <div class="row "> <i class="fas fa-star "><small> 46</small></i></div>
+
+                            </div>
+                        </div>
+                        <div class="row col-8 "> <a href="#/ " class="open-now ">Opens now</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="card text-left ">
+
+                    <img src="Assets/img/15.png " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-md-4 col-sm-2 col-xs-2 "> <img src="Assets/svg/logo06.svg " alt=" "></div>
+                            <div class="col-md-8 col-sm-10 col-xs-10 ">
+                                <div class="row ">
+                                    <h5 class="card-title col-12 "> Food land </h5>
+                                </div>
+                                <div class="row "> <i class="fas fa-star "><small> 46</small></i></div>
+
+                            </div>
+                        </div>
+                        <div class="row col-8 "> <a href="#/ " class="open-tomorrow ">Opens Tomorrow</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="card text-left ">
+
+                    <img src="Assets/img/16.png " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-md-4 col-sm-2 col-xs-2 "> <img src="Assets/svg/logo07.svg " alt=" "></div>
+                            <div class="col-md-8 col-sm-10 col-xs-10 ">
+                                <div class="row ">
+                                    <h5 class="card-title col-12 "> Food land </h5>
+                                </div>
+                                <div class="row "> <i class="fas fa-star "><small> 12</small></i></div>
+
+                            </div>
+                        </div>
+                        <div class="row col-8 "> <a href="#/ " class="open-now ">Opens now</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="card text-left ">
+
+                    <img src="Assets/img/17.png " class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <div class="row ">
+                            <div class="col-md-4 col-sm-2 col-xs-2 "> <img src="Assets/svg/logo08.svg " alt=" "></div>
+                            <div class="col-md-8 col-sm-10 col-xs-10 ">
+                                <div class="row ">
+                                    <h5 class="card-title col-12 "> pizza land </h5>
+                                </div>
+                                <div class="row "> <i class="fas fa-star "><small> 46</small></i></div>
+
+                            </div>
+                        </div>
+                        <div class="row col-8 "> <a href="#/ " class="open-now ">Opens now</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Featured Restaurants -->
+
+
+
+    <!-- Features & Search by restaurants -->
+    <div class="container-fluid Features ">
+
+        <div class="card ">
+            <div class="card-body ">
+                <div class="row ">
+                    <div class="col-md ">
+                        <img src="Assets/svg/icon01.svg " alt=" ">
+                        <h3 style="left: 150px;top: -20px; ">Daily <br> discount</h3>
+                    </div>
+                    <div class="col-md ">
+                        <img src="Assets/svg/icon02.svg " alt=" ">
+
+                        <h3 style="left: 150px;top: -20px; ">Live <br> Tracing</h3>
+                    </div>
+
+                    <div class="col-md ">
+                        <img src="Assets/svg/icon03.svg " alt=" ">
+                        <h3 style="left: 150px;top: -20px; ">Quick <br> Delivery</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="vl " style="right: 1000px;top: -140px; "></div>
+            <div class="vl " style="right: 500px;top: -230px; "></div>
+
+        </div>
+
+
+        <div class="search-by-restaurant ">
+            <a href="#/ " class="view-all d-none d-sm-none d-md-block ">View All <i class="fas fa-angle-right "></i></a>
+            <h3 style="margin-top: 50px; font-weight: bold; font-family: 'Sofia', sans-serif;margin-bottom: 50px; ">
+                Search by Restaurants</h3>
+
+            <div class="row ">
+                <div class="col-md ">
+                    <img src="Assets/img/18.png ">
+
+                    <b>Pizza</b>
+                </div>
+                <div class="col-md ">
+                    <img src="Assets/img/19.png ">
+                    <b>burger</b>
+                </div>
+                <div class="col-md ">
+                    <img src="Assets/img/20.png ">
+                    <b>noodles</b>
+                </div>
+                <div class="col-md ">
+                    <img src="Assets/img/21.png ">
+                    <b>subway</b>
+                </div>
+                <div class="col-md ">
+                    <img src="Assets/img/22.png ">
+                    <b>chowmein</b>
+                </div>
+                <div class="col-md ">
+                    <img src="Assets/img/23.png ">
+                    <b>Steak</b>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- End Features & Search by restaurants -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+<!-- Scripts -->
+
+<!-- Jquery CDN -->
+<script src=" https://code.jquery.com/jquery-3.6.0.js " integrity=" sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
+
+<!-- Boostrap JavaScript -->
+<script src=" Assets/js/bootstrap.js "></script>
+
+<!-- Swiper JS -->
+<script src=" https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+<!-- Custom Js -->
+<script src=" Assets/js/main.js "></script>
+
+<!-- End Scripts -->

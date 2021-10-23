@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- Boostrap Css -->
+    <link rel="stylesheet" href="Assets/css/bootstrap.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Open Sans|Oleo Script Swash Caps">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>eFood | eShop - Online Food ordering</title>
+</head>
+<style>
+    body {
+        font-family: 'Open Sans Pro';
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid ">
+            <img src="Assets/img/logo.PNG" class="logo d-none d-sm-none d-md-block" alt="">
+
+            <img src="Assets/img/logo.PNG" class="d-block d-sm-block d-md-none">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent 	d-none d-md-block d-sm-none">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <div class="icon-container collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="input-container">
+                                <i class="fas fa-map-marker-alt icon"></i>
+                                <input class="input-field" type="text" placeholder="Enter Your Address" name="usrnm">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary"><i class="fas fa-search icon-search"></i> Find Food</button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/"><i class="fas fa-percentage"> O</i>ffers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/"><i class="fas fa-life-ring"> </i>Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/"><i class="fab fa-opencart "> </i>Cart</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <style>
+        .cart-mobile {
+            background-color: var(--primary-color);
+            color: white;
+            padding: .375rem .75rem;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 1rem;
+            border-color: var(--primary-color);
+        }
+        
+        .cart-mobile:hover {
+            color: white;
+        }
+        
+        #mybutton {
+            position: fixed;
+            bottom: 10px;
+            right: 5px;
+            z-index: 5;
+        }
+    </style>
+    <div id="mybutton">
+
+        <div class="row">
+            <div class="col-md">
+                <a class=" cart-mobile nav-link   d-block d-lg-none  d-sm-block" href="#/"><i
+                        class="fas fa-shopping-cart">
+                    </i> Order now</a>
+            </div>
+            <div class="col-md">
+
+            </div>
+        </div>
+    </div>
+    <style>
+        .nav-mb {
+            border-radius: 10px;
+        }
+    </style>
+    <!-- Mobile Navbar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Eshop</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body " style="background-color: var(--primary-color);">
+            <nav class="navbar nav-mb navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+
+                    <div class="" id="">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="border-radius: 100px; ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fas fa-percentage"> O</i>ffers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fas fa-life-ring"> </i>Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fab fa-opencart "> </i>Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-primary">Logout</button>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End mobile navbar -->
+    <div class="container-fluids efood" style="margin-top:80px;">
+        <div class="card  bg-dark ">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md">
+
+                        <img src="Assets/img/24.png" alt="" class="img-efood img-fluid float-end">
+                    </div>
+                    <div class="col-md">
+                        <h2>eFood</h2>
+
+                        <small class="text-grey">Fast food,italian,south indian,punjabi</small> <br> <label class="text-grey">TIME SQUARE</label>
+                        <br><br>
+                        <div class="row">
+                            <div class=" col">
+                                <i class="fas fa-star" style="font-size: 13px;"></i> 3.5
+                                <br>
+                                <lable class="text-grey">50+ rating</lable>
+
+                            </div>
+                            <div class="col-md d-none d-sm-none d-md-block">
+                                <div class="vertical "></div>
+                            </div>
+                            <div class=" col">
+                                32 mins
+                                <br>
+                                <small class="text-grey">Delivery Time</small>
+                            </div>
+                            <div class="col-md d-none d-sm-none d-md-block">
+                                <div class="vertical "></div>
+                            </div>
+                            <div class="col">
+                                200
+                                <br>
+                                <small class="text-grey ">Cost for Two</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <style>
+
+                        </style>
+                        <div class="bg-dark offers d-none d-md-block d-sm-none">Offers</div>
+                        <div class="bg-dark offers-mobile">Offers</div>
+                        <div class="bg-dark row offer-border" style="border: 1px solid white;padding: 10px;">
+                            <div class="col-md-4 col-sm-2">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div class="col-md-8 col-sm-10">
+                                15% off up to 100rs. i use 100sbi above 400
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <style>
+
+    </style>
+    <div class="container d-none d-lg-block" style="position: relative;top: -20px;left: 300px;">
+        <div class="row">
+            <div class="col-md-4">
+
+
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="+91">India</option>
+
+                    <option value="Sand vish">
+                    <option value="chowmin">
+
+                </datalist>
+
+            </div>
+            <div class="col-md-2">
+
+                <input class="form-control" list="type" id="exampleDataList" placeholder="Veg Only">
+                <datalist id="type">
+                    <option value="None Veg">
+                    <option value="Veg">
+
+                </datalist>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 20px; height: 90vh;">
+        <input checked="checked" id="tab1" type="radio" name="tab" data-tab="tab1" />
+        <input id="tab2" type="radio" name="tab" data-tab="tab2" />
+
+        <nav style="margin-top: 10px;">
+            <label for="tab1" data-tab-label="tab1" role="tab">
+                <h4>Order Online</h4>
+            </label> <label for="tab2" data-tab-label="tab2" role="tab">
+                <h4>Review</h4>
+            </label>
+
+
+        </nav>
+        <style>
+            .categoary {
+                border: none;
+                background-color: white;
+                padding: 0;
+            }
+        </style>
+
+        <nav class="navbar categoary navbar-expand-lg navbar-light bg-light d-block d-sm-block d-lg-none">
+            <div class="container-fluid" style="background-color: white;border: none;">
+                <a class="navbar-brand" href="#">Categoary</a>
+                <button class="navbar-toggler" type="button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+
+        </nav>
+        <style>
+            .top-offcanvas {
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-left: 50px;
+                margin-right: 50px;
+                border-radius: 10px;
+            }
+            
+            .top-offcanvas .nav-link {
+                color: var(--primary-color);
+            }
+        </style>
+        <div class="offcanvas top-offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasTopLabel">Categoarys</h5>
+                <a href="#" class="close-button" data-bs-dismiss="offcanvas" aria-label="Close"></a>
+
+            </div>
+            <div class="offcanvas-body">
+                <div class="col-2 order-list-group">
+                    <nav id="myScrollspy" style="border-style: none;">
+                        <ul class="nav nav-pills flex-column text-right">
+                            <li class="nav-item"><a class="nav-link " href="#content-Recommended">Recommended</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" onclick="scroll('#content-Family')" href="#content-Family">Family</a></li>
+                            <li class="nav-item"><a class="nav-link" id="combo" href="#content-combo">Combo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .order-list-group {
+                border-style: none;
+            }
+            
+            .close-button {
+                padding: 10px;
+                height: 10px;
+                width: 10px;
+                position: relative;
+                box-sizing: border-box;
+                line-height: 40px;
+                display: inline-block;
+            }
+            
+            .close-button:before,
+            .close-button:after {
+                transform: rotate(-45deg);
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -5px;
+                margin-left: -25px;
+                display: block;
+                height: 02px;
+                width: 30px;
+                background-color: #000;
+                transition: all 0.25s ease-out;
+            }
+            
+            .close-button:after {
+                transform: rotate(-135deg);
+            }
+            
+            .close-button:hover:before,
+            .close-button:hover:after {
+                transform: rotate(0deg);
+            }
+        </style>
+        <section data-tab-panel="tab1" role="tabpanel" aria-labelledby="tab1">
+            <div class="row">
+                <div class="col-2 order-list-group">
+                    <nav id="myScrollspy" style="border-style: none;">
+                        <ul class="nav nav-pills flex-column text-right d-none d-lg-block">
+                            <li class="nav-item"><a class="nav-link actives" href="#content-Recommended">Recommended</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" onclick="scroll('#content-Family')" href="#content-Family">Family</a></li>
+                            <li class="nav-item"><a class="nav-link" id="combo" href="#content-combo">Combo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-md-10  orders">
+                    <div data-spy="scroll" class="sroll-order" style="height: 90vh" data-target="#myScrollspy" data-offset="10">
+                        <h4 id="content-Recommended">Recommended</h4>
+                        <p>
+                            <div class="card ">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/13.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button type="button" class="btn" data-name="pizza" data-price="$40">Add
+                                            +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card ">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/13.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/15.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/16.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/17.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </p>
+                        <h4 id="content-Family">Family </h4>
+                        <p>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/13.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/14.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button type="button" class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/15.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/16.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/17.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </p>
+                        <h4 id="content-combo">Combo</h4>
+                        <p>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/13.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/14.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button type="button" class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/15.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/16.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/17.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <section data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab1">
+            Second Tab Panel
+        </section>
+        <section data-tab-panel="tab3" role="tabpanel" aria-labelledby="tab1">
+            Third Tab Panel
+        </section>
+
+
+
+    </div>
+
+
+
+
+    <!-- Jquery CDN -->
+    <script src=" https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Boostrap JavaScript -->
+    <script src="Assets/js/bootstrap.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="Assets/js/main.js"></script>
+
+
+
+    <script>
+    </script>
+</body>
+
+</html>
+
+</html>

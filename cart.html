@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
+
+    <!-- Boostrap Css -->
+    <link rel="stylesheet" href="Assets/css/bootstrap.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>Home | eShop - Online Food ordering</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid ">
+            <img src="Assets/img/logo.PNG" alt="">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent 	d-none d-md-block d-sm-none">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <div class="icon-container collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="input-container">
+                                <i class="fas fa-map-marker-alt icon"></i>
+                                <input class="input-field" type="text" placeholder="Enter Your Address" name="usrnm">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary"><i class="fas fa-search icon-search"></i> Find Food</button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/"><i class="fas fa-percentage" > O</i>ffers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/"><i class="fas fa-life-ring" > </i>Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/"><i class="fab fa-opencart " > </i>Cart</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Eshop</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body " style="background-color: var(--primary-color);">
+            <nav class="navbar nav-mb navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+
+                    <div class="" id="">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="border-radius: 100px; ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fas fa-percentage" > O</i>ffers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fas fa-life-ring" > </i>Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fab fa-opencart " > </i>Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-primary">Logout</button>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End mobile navbar -->
+
+    <div class="container-fluid" style="margin-top: 80px;">
+        <div class="row ">
+
+            <div class="col-md-1">
+
+            </div>
+
+            <div class="col-md-7 left-border">
+                <div class="card profile">
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <div class="col-md">
+                                <img src="" alt="">
+                                <h1>Account</h1>
+                                <span style="color:#b4b6b7;"> To place your order ,log in to your existing account or sign up</span><br><br>
+                                <button class=" btn-scs"><small>Have an account?</small> <br> <b>Log in</b></button>
+                                <button class="btn-scs"><small>New you efood?</small> <br> <b>Sign up</b></button>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="Assets/img/hot-dish.png" alt="" width="100%" style="margin-top: 50px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="card profile">
+                    <div class="card-body">
+                        <h1 style="color:#b4b6b7;">Delivery Address</h1>
+                    </div>
+                </div>
+                <br>
+                <div class="card profile">
+                    <div class="card-body">
+                        <h1 style="color:#b4b6b7;">Payment</h1>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .cart {
+                    border-style: none;
+                    background-color: #e9ecee;
+                }
+            </style>
+            <div class="col-md-4 mb-cart">
+                <div class="card cart">
+                    <div class="card-body">
+                        <div class="col-md">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="assets/img/12.png" alt="" width="65px" style="border-radius: 10px;">
+                                </div>
+                                <div class="col-md-10">
+                                    <h5><b>efood</b></h5>
+                                    <small style="border-bottom: 1px solid black;">Time square</small>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md" style="padding: 20px;">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
+                                <div class="col-6">
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
+                                            class="plus">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h5><b>$40</b></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
+                                <div class="col-6">
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
+                                            class="plus">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h5><b>$40</b></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
+                                <div class="col-6">
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
+                                            class="plus">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h5><b>$40</b></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
+                                <div class="col-6">
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
+                                            class="plus">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h5><b>$40</b></h5>
+                                </div>
+                            </div>
+                            <style>
+                                .btn-sp-cooking-instruction {
+                                    background-color: white;
+                                    padding: 20px;
+                                    border-style: none;
+                                    border-radius: 10px;
+                                    color: #b4b6b7;
+                                }
+                            </style>
+                            <div class="col-md">
+                                <button class="btn-sp-cooking-instruction col-md-12">Add Special Cooking Instruction</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <style>
+                        .support-rider {
+                            background-color: #f8f8f8;
+                            color: #7d7d7d;
+                        }
+                        
+                        .support-rider button {
+                            background-color: #f8f8f8;
+                            border: 1px solid #7d7d7d;
+                            padding: 6px;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            margin: 10px;
+                            border-radius: 10px;
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+                    </style>
+                    <div class=" support-rider ">
+                        <div class="card-12 con">
+                            <div class="card-body ">
+                                <h3>SUPPORT YOU RIDER</h3>
+                                Support your valet and make their day! 100% of your tip will be transferred to your valet.
+                                <br>
+                                <button>+20</button><button>+30</button><button>+50</button>
+
+
+
+
+                                <div id="cart-item">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .bill-details {
+                            background-color: #e9ecee;
+                            border-style: none;
+                        }
+                        
+                        .bill-details .promo-code {
+                            border-radius: 10px;
+                            border-style: none;
+                        }
+                        
+                        .bill-details .promo-code-img {
+                            position: relative;
+                            left: 300px;
+                            top: -45px;
+                            width: 15%;
+                        }
+                    </style>
+
+                    <div class="card bill-details">
+                        <div class="card-body">
+                            <div class="container">
+                                <input type="text" name="" class="form-control promo-code" id="" placeholder="Enter your promo code">
+                                <a href="#/"> <img src="Assets/svg/enter.svg" class="promo-code-img" alt=""></a>
+                            </div>
+
+                            <h6><b>Bill details</b> </h6>
+                            <div class="row">
+                                <div class="col-md-10 ">
+                                    item total
+                                </div>
+                                <div class="col-md-2">
+                                    $160
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    Delivery partner Fee
+                                </div>
+                                <div class="col-md-2">
+                                    $50
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    Taxes and Charges
+                                </div>
+                                <div class="col-md-2">
+                                    $5
+                                </div>
+                            </div>
+                            <hr style="color: #000;height: 3px;">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <b>Taxes and Charges</b>
+                                </div>
+                                <div class="col-md-2">
+                                    $115
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Jquery CDN -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <!-- Boostrap JavaScript -->
+            <script src="Assets/js/bootstrap.js "></script>
+
+            <!-- Swiper JS -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+            <!-- Custom Js -->
+            <script src="Assets/js/main.js "></script>
+
+</body>
+
+</html>

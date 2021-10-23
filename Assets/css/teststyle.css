@@ -1,0 +1,786 @@
+* {
+    font-size: 18px;
+}
+
+body {
+    font-family: "Open Sans";
+}
+
+body {
+    font-family: "Source Sans Pro";
+}
+
+
+/* Variables */
+
+ :root {
+    --primary-color: #f96220;
+    --white-color: #ffff;
+    --secondary-color: #c8c8c8;
+}
+
+
+/* Header Css */
+
+.navbar {
+    background-color: white;
+}
+
+.navbar img {
+    padding-left: ;
+}
+
+.icon-container .icon-map {
+    position: absolute;
+    display: flex;
+    padding-top: 0.5rem;
+    left: 28.5%;
+    top: 20%;
+    color: tomato;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    left: 50px;
+    top: 05px;
+    position: relative;
+    color: #f96220;
+    min-width: 50px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.icon-container input {
+    background-color: #f4f4f4;
+    border: solid #f4f4f4;
+    border-radius: 10px;
+    padding-left: 40px;
+    width: 20rem;
+    font-size: 0.8rem;
+    margin-right: 2rem;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #fc6e4d;
+    border: solid #fc6e4d;
+    border-radius: 07px;
+    font-size: 18px;
+    margin-right: 2rem;
+}
+
+.btn-primary:focus {
+    background-color: #fd8b71;
+    border: solid #fd8b71;
+    box-shadow: none;
+}
+
+.btn-primary:active {
+    background-color: #fd8b71;
+    border: solid #fd8b71;
+    box-shadow: none;
+}
+
+.btn-primary:active:focus {
+    box-shadow: none;
+}
+
+.btn-primary:hover {
+    background-color: #fd8b71;
+    border: solid #fd8b71;
+}
+
+.btn-login {
+    font-size: 18px;
+    margin: 5px;
+    background-color: #f4f4f4;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: left;
+    font-size: 15px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide:hover {
+    border-radius: 15px;
+    background: #fff;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.svg-left {
+    max-width: 60%;
+}
+
+.prev {
+    background: none;
+    border: none;
+    border-radius: 100%;
+}
+
+.next {
+    background: none;
+    border: none;
+    border-radius: 100%;
+    font-size: 10px;
+}
+
+.svg-right {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    max-width: 60%;
+}
+
+.body-container {
+    background-image: url('Assets/img/backround.png');
+    background-repeat: no-repeat;
+    height: auto;
+    background-size: 100% 100%;
+    max-width: 100%;
+}
+
+.body-container .f-dish h6 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.body-container .f-dish h1 {
+    font-size: 4.5rem;
+    font-weight: lighter;
+    color: var(--primary-color);
+}
+
+.body-container .f-dish h1 b {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.body-container .f-dish h4 {
+    color: #424242;
+    font-weight: bold;
+}
+
+.body-container .f-dish p {
+    color: #000;
+    justify-content: left;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 0;
+    /* number of lines to show */
+    -webkit-box-orient: horizontal;
+}
+
+.Restaurants-name {
+    background-color: #fc6e4d;
+    color: white;
+    font-size: medium;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px 30px 30px 0px;
+    position: relative;
+    margin-right: 55%;
+    right: 20px;
+}
+
+.discount-cards {
+    display: flex;
+}
+
+.discount-cards .col .card {
+    width: 100%;
+    margin: 10px;
+}
+
+.discount-cards .discount-item {
+    width: 200px;
+    border-style: none;
+}
+
+.discount-cards .discount-item img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.discount-cards .discount {
+    color: white;
+    background-color: #f8b40d;
+    padding-right: 40px;
+    margin-right: 120px;
+    border-radius: 0px 30px 0px 10px;
+    font-size: 2.02rem;
+}
+
+.discount-cards .off {
+    color: white;
+    font-size: 1.25rem;
+    top: -50px;
+    left: 45px;
+    position: relative;
+}
+
+.discount-cards .off-text {
+    color: white;
+    position: relative;
+    top: -30px;
+    left: 25px;
+}
+
+.discount-cards .offer-end-days {
+    background-color: #fdeade;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #f27e3a;
+    padding-left: 10px;
+}
+
+
+/* How Does Works  */
+
+.how-does-works {
+    background-image: linear-gradient(#fff1ea, white);
+    color: black;
+}
+
+.how-does-works .card {
+    color: #d3d3d3;
+    border-style: none;
+    background: none;
+}
+
+.how-does-works .col h6 {
+    color: black;
+    src: url("https://fonts.googleapis.com/css?family=Noto Sans Display");
+    font-family: "Open Sans";
+}
+
+.position-relative .cookie {
+    z-index: -2;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    transform: rotate(140deg);
+    filter: blur(2px);
+    position: relative;
+    right: 60px;
+    bottom: 30px;
+}
+
+
+/* End how does work */
+
+
+/* Popular Item */
+
+.popular-item .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.popular-item.swiper-slide {
+    text-align: left;
+    font-size: 15px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.popular-item .swiper .card {
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.popular-item .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popular-item .swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popular-item .icon {
+    font-size: 0.6rem;
+    color: #f27e3a;
+    position: relative;
+    margin-left: -60px;
+}
+
+.popular-item .price {
+    background-color: #f27e3a;
+    color: white;
+    padding: 5px;
+}
+
+.popular-item .btn-order {
+    background-color: #fdeade;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #f27e3a;
+    padding-left: 10px;
+    font-size: 0.6rem;
+    margin-top: 10px;
+}
+
+.svg-left {
+    max-width: 60%;
+}
+
+.prev {
+    background: none;
+    border: none;
+    border-radius: 100%;
+}
+
+.next {
+    background: none;
+    border: none;
+    border-radius: 100%;
+    font-size: 10px;
+}
+
+.svg-right {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    max-width: 60%;
+}
+
+
+/* Featured Restaurants */
+
+.featured-restaurants .card {
+    position: relative;
+    border-style: none;
+    border: none;
+    margin: 10px;
+}
+
+.featured-restaurants .card .card-img-top {
+    border-radius: 10px;
+}
+
+.featured-restaurants .card .fa-star {
+    color: #ffb20b;
+}
+
+.featured-restaurants .card .open-tomorrow {
+    position: relative;
+    background-color: #fce3d4;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #f27b35;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.featured-restaurants .card .open-now {
+    position: relative;
+    background-color: #e4f1d8;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #88c152;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.featured-restaurants .card .off {
+    background-color: #ec6f28;
+    position: relative;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    right: 0px;
+    font-weight: bold;
+}
+
+.featured-restaurants .card .fast {
+    background-color: #ffc036;
+    position: relative;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* Features  */
+
+.Features {
+    position: relative;
+    background-color: #fff1ea;
+    background-image: linear-gradient(#fff, #ffebe1);
+    padding: 60px;
+}
+
+.Features .card {
+    border-radius: 25px;
+    border-style: none;
+    height: 280px;
+}
+
+.Features .card .col img {
+    width: 25%;
+    margin-left: 30px;
+    position: relative;
+    top: 60px;
+}
+
+.Features .card .col h3 {
+    color: #fb491e;
+    position: relative;
+}
+
+
+/* Search by Restaurants */
+
+.search-by-restaurant img {
+    border-radius: 60%;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.search-by-restaurant b {
+    position: relative;
+    left: 50px;
+}
+
+.view-all {
+    color: #f27e3a;
+    text-decoration: none;
+    position: relative;
+}
+
+.view-all:hover {
+    color: hsl(22, 97%, 45%);
+}
+
+
+/* Best item */
+
+
+/* Best item */
+
+.best-item {
+    margin-top: 50px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.best-item .card {
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.best-item .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.best-item .card .card-text button {
+    color: white;
+    background-color: #f9601e;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.best-item .card .card-text button:hover {
+    background-color: #f54900;
+}
+
+.our-customers {
+    padding: 50px;
+    position: relative;
+    background-image: url('Assets/img/04.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.our-customers .customers-container {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.our-customers .customers-container .cusomers-tag {
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.our-customers .card {
+    height: 400px;
+    margin: 10px;
+}
+
+.our-customers .customer-profile {
+    padding: 20px;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.our-customers .customers-review {
+    text-align: center;
+    position: relative;
+}
+
+.our-customers .customers-review .icon i {
+    position: relative;
+    right: 50px;
+    margin-bottom: 30px;
+}
+
+.our-customers .customers-review .customer-name {
+    font-weight: bold;
+    font-size: 1.25rem;
+    font-family: "Sofia", sans-serif;
+    color: #bbbdbf;
+}
+
+footer {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 100px;
+    position: relative;
+    font-family: 'Open Sans';
+}
+
+.icons-social-media {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icons-social-media i {
+    padding: 5px;
+}
+
+.icons-social-media .fa-instagram:hover {
+    border-radius: 5px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.icons-social-media .fa-facebook:hover {
+    border-radius: 5px;
+    background-color: #4267B2;
+}
+
+.icons-social-media .fa-twitter:hover {
+    border-radius: 5px;
+    background-color: #00acee;
+}
+
+footer .icon-container .icon-map {
+    position: absolute;
+    display: flex;
+    padding-top: 0.5rem;
+}
+
+footer .input-container {
+    display: flex;
+    width: 100%;
+}
+
+footer .icon {
+    left: 50px;
+    top: 07px;
+    position: relative;
+    color: #adadad;
+    min-width: 50px;
+}
+
+footer .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+footer .icon-container input {
+    background-color: #424242;
+    border: solid #424242;
+    border-radius: 10px;
+    padding-left: 40px;
+    width: 20rem;
+    font-size: 0.8rem;
+    margin-right: 2rem;
+}
+
+footer .btn-subscribe {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 1.25rem;
+    background: #f96120;
+    overflow: hidden;
+    transition: .50s;
+}
+
+footer .btn-subscribe:hover {
+    color: white;
+    box-shadow: 0 0 10px #f96120, 0 0 40px #f96120, 0 0 10px #f96120;
+}
+
+
+/* Media Queries */
+
+
+/* xs devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    /* Discount Cards */
+    .Restaurants-name {
+        background-color: #fc6e4d;
+        color: white;
+        font-size: small;
+        padding-left: 20px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 0px 30px 30px 0px;
+        position: relative;
+        right: 20px;
+    }
+    .discount-cards {
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /* Our Customers */
+    .our-customers {
+        padding: 50px;
+        position: relative;
+        background-image: url('Assets/img/04.png');
+        background-repeat: no-repeat;
+        background-size: 100% 2000px;
+    }
+    /* End  */
+    /* How does work */
+    .location {
+        margin-left: 6.1rem;
+    }
+    .select-location {
+        margin-left: 90px;
+    }
+    .position-relative .cookie {
+        z-index: -2;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        transform: rotate(140deg);
+        filter: blur(2px);
+        position: relative;
+        right: 40px;
+        bottom: 10px;
+    }
+    /* End how does work */
+    /* Footer */
+    footer {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 50px;
+        position: relative;
+        font-family: 'Open Sans';
+        font-size: 5px;
+    }
+    footer .btn-subscribe {
+        position: relative;
+        display: inline-block;
+        color: white;
+        font-size: 0.25rem;
+        background: #f96120;
+        overflow: hidden;
+        transition: .50s;
+    }
+    /* Efood  */
+    .float-end {
+        margin-left: 10rem;
+    }
+    /* End Efood */
+    /* Cart */
+    .mb-cart {
+        margin-top: 450px;
+    }
+    /* End Cart */
+}
+
+
+/* sm devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {}
+
+
+/* md devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {}
+
+
+/* lg devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* xl  devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}
