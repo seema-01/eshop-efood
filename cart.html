@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="Assets/css/bootstrap.css">
 
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Open Sans|Oleo Script Swash Caps">
+
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
@@ -24,6 +25,11 @@
     <link rel="stylesheet" href="Assets/css/style.css">
     <title>Home | eShop - Online Food ordering</title>
 </head>
+<style>
+    body {
+        font-family: 'Open Sans';
+    }
+</style>
 
 <body>
     <!-- Header -->
@@ -274,17 +280,23 @@
                         
                         .bill-details .promo-code-img {
                             position: relative;
-                            left: 300px;
-                            top: -45px;
-                            width: 15%;
+                            max-width: 70%;
                         }
                     </style>
 
                     <div class="card bill-details">
                         <div class="card-body">
                             <div class="container">
-                                <input type="text" name="" class="form-control promo-code" id="" placeholder="Enter your promo code">
-                                <a href="#/"> <img src="Assets/svg/enter.svg" class="promo-code-img" alt=""></a>
+                                <div class="position-relative">
+                                    <input type="text" name="" class="form-control promo-code" id="" placeholder="Enter your promo code">
+
+                                    <div class="position-absolute position-absolute top-50 end-0  translate-middle-y">
+                                        <a href="#/"> <img src="Assets/svg/enter.svg" class="promo-code-img ms-5" alt=""></a>
+                                    </div>
+
+                                </div>
+
+
                             </div>
 
                             <h6><b>Bill details</b> </h6>
