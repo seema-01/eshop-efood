@@ -26,10 +26,6 @@ body {
     background-color: white;
 }
 
-.navbar img {
-    padding-left: ;
-}
-
 .icon-container .icon-map {
     position: absolute;
     display: flex;
@@ -45,7 +41,7 @@ body {
     margin-bottom: 15px;
 }
 
-.icon {
+.navbar .icon {
     padding: 10px;
     left: 50px;
     top: 05px;
@@ -106,6 +102,60 @@ body {
     background-color: #f4f4f4;
 }
 
+.body-container {
+    background-image: url('Assets/img/backround.png');
+    background-repeat: no-repeat;
+    height: auto;
+    background-size: 100% 100%;
+    max-width: 100%;
+}
+
+.body-container .f-dish h6 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.body-container .f-dish h1 {
+    font-size: 4.5rem;
+    font-weight: lighter;
+    color: var(--primary-color);
+}
+
+.body-container .f-dish h1 b {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.body-container .f-dish h4 {
+    color: #424242;
+    font-weight: bold;
+}
+
+.body-container .f-dish p {
+    color: #000;
+    justify-content: left;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 0;
+    /* number of lines to show */
+    -webkit-box-orient: horizontal;
+}
+
+.Restaurants-name {
+    background-color: #fc6e4d;
+    color: white;
+    font-size: medium;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px 30px 30px 0px;
+    position: relative;
+    margin-right: 55%;
+    right: 20px;
+}
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -161,61 +211,7 @@ body {
 .svg-right {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    max-width: 60%;
-}
-
-.body-container {
-    background-image: url('Assets/img/backround.png');
-    background-repeat: no-repeat;
-    height: auto;
-    background-size: 100% 100%;
     max-width: 100%;
-}
-
-.body-container .f-dish h6 {
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.body-container .f-dish h1 {
-    font-size: 4.5rem;
-    font-weight: lighter;
-    color: var(--primary-color);
-}
-
-.body-container .f-dish h1 b {
-    font-size: 4.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.body-container .f-dish h4 {
-    color: #424242;
-    font-weight: bold;
-}
-
-.body-container .f-dish p {
-    color: #000;
-    justify-content: left;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 0;
-    /* number of lines to show */
-    -webkit-box-orient: horizontal;
-}
-
-.Restaurants-name {
-    background-color: #fc6e4d;
-    color: white;
-    font-size: medium;
-    padding-left: 20px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 0px 30px 30px 0px;
-    position: relative;
-    margin-right: 55%;
-    right: 20px;
 }
 
 .discount-cards {
@@ -242,7 +238,7 @@ body {
     color: white;
     background-color: #f8b40d;
     padding-right: 40px;
-    margin-right: 120px;
+    margin-right: auto;
     border-radius: 0px 30px 0px 10px;
     font-size: 2.02rem;
 }
@@ -312,10 +308,9 @@ body {
     height: 100%;
 }
 
-.popular-item.swiper-slide {
+.popular-item .swiper-slide {
     text-align: left;
     font-size: 15px;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -328,6 +323,18 @@ body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+}
+
+.popular-item .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popular-item .swiper {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .popular-item .swiper .card {
@@ -351,7 +358,6 @@ body {
     font-size: 0.6rem;
     color: #f27e3a;
     position: relative;
-    margin-left: -60px;
 }
 
 .popular-item .price {
@@ -368,29 +374,6 @@ body {
     padding-left: 10px;
     font-size: 0.6rem;
     margin-top: 10px;
-}
-
-.svg-left {
-    max-width: 60%;
-}
-
-.prev {
-    background: none;
-    border: none;
-    border-radius: 100%;
-}
-
-.next {
-    background: none;
-    border: none;
-    border-radius: 100%;
-    font-size: 10px;
-}
-
-.svg-right {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    max-width: 60%;
 }
 
 
@@ -464,20 +447,11 @@ body {
     position: relative;
     background-color: #fff1ea;
     background-image: linear-gradient(#fff, #ffebe1);
-    padding: 60px;
 }
 
 .Features .card {
     border-radius: 25px;
     border-style: none;
-    height: 280px;
-}
-
-.Features .card .col img {
-    width: 25%;
-    margin-left: 30px;
-    position: relative;
-    top: 60px;
 }
 
 .Features .card .col h3 {
@@ -485,18 +459,17 @@ body {
     position: relative;
 }
 
-
-/* Search by Restaurants */
+.dtd-border {
+    border-right: 2px solid #bbbdbf;
+}
 
 .search-by-restaurant img {
     border-radius: 60%;
-    width: 80%;
-    margin-bottom: 20px;
+    max-width: 100%;
 }
 
 .search-by-restaurant b {
     position: relative;
-    left: 50px;
 }
 
 .view-all {
@@ -552,135 +525,51 @@ body {
     background-color: #f54900;
 }
 
-.our-customers {
-    padding: 50px;
+.our-customer-container .swiper {
+    width: 100%;
+    height: 20%;
+}
+
+.our-customer-container .swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our-customer-container {
     position: relative;
     background-image: url('Assets/img/04.png');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 100%;
+    height: auto;
 }
 
-.our-customers .customers-container {
+.our-customer .card {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
     position: relative;
-    color: white;
     text-align: center;
 }
 
-.our-customers .customers-container .cusomers-tag {
-    text-align: center;
-    margin-left: 400px;
-    margin-right: 400px;
-}
-
-.our-customers .card {
-    height: 400px;
-    margin: 10px;
-}
-
-.our-customers .customer-profile {
-    padding: 20px;
-    width: 50%;
+.our-customer img {
+    max-width: 50%;
     border-radius: 50%;
-}
-
-.our-customers .customers-review {
-    text-align: center;
+    margin-bottom: 20px;
     position: relative;
 }
 
-.our-customers .customers-review .icon i {
-    position: relative;
-    right: 50px;
-    margin-bottom: 30px;
-}
-
-.our-customers .customers-review .customer-name {
-    font-weight: bold;
-    font-size: 1.25rem;
-    font-family: "Sofia", sans-serif;
-    color: #bbbdbf;
-}
-
-footer {
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-top: 100px;
-    position: relative;
-    font-family: 'Open Sans';
-}
-
-.icons-social-media {
-    margin-top: 20px;
+.our-customer i {
+    color: #f96220;
     margin-bottom: 20px;
 }
 
-.icons-social-media i {
-    padding: 5px;
+.our-customer .review {
+    margin-bottom: 20px;
 }
 
-.icons-social-media .fa-instagram:hover {
-    border-radius: 5px;
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.icons-social-media .fa-facebook:hover {
-    border-radius: 5px;
-    background-color: #4267B2;
-}
-
-.icons-social-media .fa-twitter:hover {
-    border-radius: 5px;
-    background-color: #00acee;
-}
-
-footer .icon-container .icon-map {
-    position: absolute;
-    display: flex;
-    padding-top: 0.5rem;
-}
-
-footer .input-container {
-    display: flex;
-    width: 100%;
-}
-
-footer .icon {
-    left: 50px;
-    top: 07px;
-    position: relative;
-    color: #adadad;
-    min-width: 50px;
-}
-
-footer .input-field {
-    width: 100%;
-    padding: 10px;
-    outline: none;
-}
-
-footer .icon-container input {
-    background-color: #424242;
-    border: solid #424242;
-    border-radius: 10px;
-    padding-left: 40px;
-    width: 20rem;
-    font-size: 0.8rem;
-    margin-right: 2rem;
-}
-
-footer .btn-subscribe {
-    position: relative;
-    display: inline-block;
-    color: white;
-    font-size: 1.25rem;
-    background: #f96120;
-    overflow: hidden;
-    transition: .50s;
-}
-
-footer .btn-subscribe:hover {
-    color: white;
-    box-shadow: 0 0 10px #f96120, 0 0 40px #f96120, 0 0 10px #f96120;
+.our-customer .customer-name {
+    font-family: 'Oleo Script Swash Caps';
+    font-size: 25px;
 }
 
 
@@ -735,6 +624,12 @@ footer .btn-subscribe:hover {
         bottom: 10px;
     }
     /* End how does work */
+    /* Search by restaurants */
+    .dtd-border {
+        border-right: none;
+        margin-bottom: 10px;
+    }
+    /* end search  by restaurants */
     /* Footer */
     footer {
         padding-left: 10px;

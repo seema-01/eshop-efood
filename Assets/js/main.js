@@ -43,22 +43,18 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-var swiper = new Swiper(".popular-item", {
-    slidesPerView: 4,
+
+
+
+var swiper = new Swiper(".our-customer", {
+    slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+
+    // autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false,
+    // },
     breakpoints: {
         200: {
             slidesPerView: 1,
@@ -73,7 +69,7 @@ var swiper = new Swiper(".popular-item", {
             spaceBetween: 30,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30,
         },
         992: {
@@ -81,11 +77,8 @@ var swiper = new Swiper(".popular-item", {
             spaceBetween: 30,
         },
         1200: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 30,
         },
-
-
-
     }
 });
