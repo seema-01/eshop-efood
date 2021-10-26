@@ -192,13 +192,14 @@ body {
 }
 
 .svg-left {
-    max-width: 60%;
+    max-width: 100%;
 }
 
 .prev {
     background: none;
     border: none;
     border-radius: 100%;
+    font-size: 10px;
 }
 
 .next {
@@ -237,10 +238,11 @@ body {
 .discount-cards .discount {
     color: white;
     background-color: #f8b40d;
-    padding-right: 40px;
+    padding-right: 55px;
     margin-right: auto;
     border-radius: 0px 30px 0px 10px;
     font-size: 2.02rem;
+    margin-bottom: 0px;
 }
 
 .discount-cards .off {
@@ -272,6 +274,10 @@ body {
 .how-does-works {
     background-image: linear-gradient(#fff1ea, white);
     color: black;
+}
+
+.how-does-works .svg {
+    width: 10rem;
 }
 
 .how-does-works .card {
@@ -402,7 +408,7 @@ body {
     padding-right: 10px;
     color: #f27b35;
     border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
     text-decoration: none;
     margin: 10px;
@@ -416,7 +422,7 @@ body {
     padding-right: 10px;
     color: #88c152;
     border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
     text-decoration: none;
     margin: 10px;
@@ -465,11 +471,11 @@ body {
 
 .search-by-restaurant img {
     border-radius: 60%;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 .search-by-restaurant b {
-    position: relative;
+    font-size: 0.8rem;
 }
 
 .view-all {
@@ -572,6 +578,72 @@ body {
     font-size: 25px;
 }
 
+footer {
+    font-family: 'Open Sans';
+}
+
+.icons-social-media {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icons-social-media i {
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.icons-social-media .fa-instagram:hover {
+    border-radius: 5px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.icons-social-media .fa-facebook:hover {
+    border-radius: 5px;
+    background-color: #4267B2;
+}
+
+.icons-social-media .fa-twitter:hover {
+    border-radius: 5px;
+    background-color: #00acee;
+}
+
+footer .form-control {
+    background-color: #424242;
+    border: none;
+    border-radius: 5px;
+    max-width: 40vh;
+    padding-left: 25px;
+}
+
+footer .form-control:focus {
+    background-color: #424242;
+    border-color: #f96120;
+}
+
+.icon {
+    color: var( --primary-color);
+}
+
+.btn-subscribe {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    background: #f96120;
+    overflow: hidden;
+    transition: .50s;
+}
+
+.btn-subscribe:hover {
+    color: white;
+    box-shadow: 0 0 10px #f96120, 0 0 40px #f96120, 0 0 10px #f96120;
+}
+
+.btn-subscribe:focus {
+    border-color: #f96120;
+}
+
 
 /* Media Queries */
 
@@ -631,23 +703,6 @@ body {
     }
     /* end search  by restaurants */
     /* Footer */
-    footer {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 50px;
-        position: relative;
-        font-family: 'Open Sans';
-        font-size: 5px;
-    }
-    footer .btn-subscribe {
-        position: relative;
-        display: inline-block;
-        color: white;
-        font-size: 0.25rem;
-        background: #f96120;
-        overflow: hidden;
-        transition: .50s;
-    }
     /* Efood  */
     .float-end {
         margin-left: 10rem;
