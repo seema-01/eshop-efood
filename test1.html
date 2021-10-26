@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <!-- Boostrap Css -->
     <link rel="stylesheet" href="Assets/css/bootstrap.css">
@@ -21,25 +22,23 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Custom Css -->
-    <!-- <link rel="stylesheet" href="Assets/css/style.css"> -->
-
-
-    <link rel="stylesheet" href="Assets/css/teststyle.css">
-    <title>Home | eShop - Online Food ordering</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>eFood | eShop - Online Food ordering</title>
 </head>
-
+<style>
+    body {
+        font-family: 'Open Sans Pro';
+    }
+</style>
 
 <body>
-
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav id="navbar_top" class="navbar navbar-expand-lg  navbar-light">
         <div class="container-fluid ">
-            <img src="Assets/img/logo.PNG" class="logo d-none d-sm-none d-md-block" alt="">
+            <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block" style="margin-left: 200px;">
+            <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
 
-            <img src="Assets/img/logo.PNG" class="d-block d-sm-block d-md-none">
-
-
-            <button class="btn d-block d-lg-none  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">  <span class="navbar-toggler-icon"></span></button>
+            <button class="btn d-block d-lg-none d-md-none  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -54,7 +53,7 @@
                         <button class="btn btn-primary"><i class="fas fa-search icon-search"></i> Find Food</button>
                     </li>
                     <li class="nav-item">
-                        <!-- Button trigger modal -->
+
                         <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Login
                         </button>
@@ -72,819 +71,566 @@
         </div>
     </nav>
 
+    <style>
 
-    <script>
-    </script>
-    <!-- mobile navbar -->
+    </style>
+    <div id="mybutton">
 
+        <div class="row">
+            <div class="col-md">
+                <a class=" cart-mobile nav-link   d-block d-lg-none  d-sm-block" href="#/"><i
+                            class="fas fa-shopping-cart">
+                        </i> Order now</a>
+            </div>
+            <div class="col-md">
+
+            </div>
+        </div>
+    </div>
+    <style>
+        .nav-mb {
+            border-radius: 10px;
+        }
+    </style>
+    <!-- Mobile Navbar -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 id="offcanvasRightLabel">Eshop</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body ">
-            <nav class="navbar navbar-light teal lighten-4">
+        <div class="offcanvas-body " style="background-color: var(--primary-color);">
+            <nav class="navbar nav-mb navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
 
-                <!-- Navbar brand -->
 
+                    <div class="" id="">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="border-radius: 100px; ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fas fa-percentage"> O</i>ffers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fas fa-life-ring"> </i>Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/"><i class="fab fa-opencart "> </i>Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-primary">Logout</button>
+                            </li>
+                        </ul>
 
-                <!-- Collapse button -->
-
-                <!-- Collapsible content -->
-                <div>
-
-                    <!-- Links -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item ">
-                            <a class="nav-link waves-effect waves-light active" href="#">Find your location <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Login
-                            </button>
-
-                        </li>
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#signup">
-                                Sign Up
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <div class="row filters">
-                                <div class="col-md-2">
-
-                                </div>
-                                <div class="col-md-8 " style="margin-top: 80px;">
-                                    <button class="btn"><i class="fas fa-sliders-h"></i> Filters</button>
-                                    <button class="btn">Rating 4.0+</button>
-
-                                    <button class="btn">Safe and Hygienic</button>
-
-                                    <button class="btn">Pure Veg</button>
-
-                                    <button class="btn"><i class="fas fa-arrows-alt-v"></i> Delivery Time</button>
-                                    <button class="btn">Great Offers</button>
-
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <!-- Links -->
-
+                    </div>
                 </div>
-                <!-- Collapsible content -->
-
             </nav>
         </div>
     </div>
-    <!-- End Header -->
-
-
-
-
-
-
-    <!-- Login -->
-    <!-- Button trigger modal -->
-
-
-    <!-- Modal -->
-    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="efood.html" method="GET">
-                        <input type="text" name="" class="form-control" id="">
-
-                        <br>
-                        <button class="btn btn-primary col-12 " type="submit"> Send OTP</button>
-                    </form>
-                    <hr>
-                    <button class="btn col-12">Continue with Email</button>
-                    <button class="btn col-12">Continue with Google</button>
-                </div>
-                <div class="modal-footer text-left">
-                    New to eFood ? <label for="" style="color:#f96120">Create account</label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- End Login -->
-
-
-    <!-- Sign up Modal -->
-    <div class="modal fade " id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" name="" class="form-control" id="" placeholder="full name">
-                    <br>
-                    <input type="email" name="" class="form-control" id="" placeholder="email">
-                    <br>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked" style="font-size: 11px;">
-                            i agree to e food <span class="text-danger">Terms of service. Privacy Policy </span>and <span class="text-danger">Content Policies</span>
-                            </label>
-                    </div>
-                    <button class="btn btn-primary col-12 "> Send OTP</button>
-                    <hr>
-
-                    <button class="btn col-12">Continue with Google</button>
-                </div>
-                <div class="modal-footer text-left">
-                    New to eFood ? <label for="" style="color:#f96120">Create account</label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- End Login -->
-    <style>
-        .body-container {
-            background-image: url('Assets/img/backround.png');
-        }
-    </style>
-
-    <div class="container-fluid body-container">
-        <div class="row filters d-none d-sm-none d-md-block d-lg-block ">
-
-            <div class="col-8 ">
-                <button class="btn"><i class="fas fa-sliders-h"></i> Filters</button>
-                <button class="btn">Rating 4.0+</button>
-
-                <button class="btn">Safe and Hygienic</button>
-
-                <button class="btn">Pure Veg</button>
-
-                <button class="btn"><i class="fas fa-arrows-alt-v"></i> Delivery Time</button>
-                <button class="btn">Great Offers</button>
-
-            </div>
-        </div>
-        <div class="row loved-dish">
-            <div class="col-md-6 f-dish">
-                <h6><b>#1 Most loved dish</b></h6>
-                <h1>LAMB STEAK</h1>
-                <h1><b>PATATO</b></h1>
-                <h4>Quench the Hunger</h4>
-                <p class="col-sm-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet ipsum, auctor quis sagittis felis risus, a odio. Amet ante nulla sem mauris.</p>
-
-
-            </div>
-            <div class="col-md-6">
-                <img src="Assets/img/center01.png" class="dish  d-none d-sm-none d-md-block d-lg-block" alt="" width="50%">
-            </div>
-        </div>
-
-        <!-- Swiper -->
-        <div class="col-md-2">
-
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4 ">
-                <h5 class="Restaurants-name"><i class="fas fa-map-marker-alt" style="margin-right:10px"></i> Food Land</h5>
-            </div>
-            <div class="col-sm-12 col-md-8 col-lg-8 d-none d-sm-none d-md-block">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="Assets/img/center05.png" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="Assets/img/center06.png" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="Assets/img/center07.png" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="Assets/img/center08.png" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-
-
-                </div>
-            </div>
-        </div>
-
-
-
-    </div>
-    <style>
-
-    </style>
-    <div class="counter">
-        <div class='row discount-cards'>
-
-            <div class="col card-space">
-
-                <div class="card discount-item">
-                    <div class="card-body">
-                        <img src="Assets/img/01.png" alt="" width="250px">
-
-                        <label style="font-weight: bold;">Grey vegs</label>
-                        <br>
-                        <div class="offer-end-days">6 days remaining</div>
-                        <div class="discount">15</div> <span class="off">%</span><span class="off-text" ">Off</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <div class=" col card-space ">
-
-                            <div class="card discount-item ">
-                                <div class="card-body ">
-                                    <img src="Assets/img/02.png " alt=" " width="250px ">
-
-                                    <label style="font-weight: bold; ">Grey vegs</label>
-                                    <br>
-                                    <div class="offer-end-days ">6 days remaining</div>
-                                <div class="discount ">15</div> <span class="off ">%</span><span
-                                        class="off-text ">Off</span>
-
-                                </div>
-
-                            </div>
-
-                    </div>
-                    <div class="col card-space ">
-
-                        <div class="card discount-item ">
-                            <div class="card-body ">
-                                <img src="Assets/img/03.png " alt=" " width="250px ">
-
-                                <label style="font-weight: bold; ">Grey vegs</label>
-                                <br>
-                                <div class="offer-end-days ">6 days remaining</div>
-                            <div class="discount ">15</div> <span class="off ">%</span><span
-                                    class="off-text ">Off</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="col card-space ">
-
-                        <div class="card discount-item ">
-                            <div class="card-body ">
-                                <img src="Assets/img/04.png " alt=" " width="250px ">
-
-                                <label style="font-weight: bold; ">Grey vegs</label>
-                                <br>
-                                <div class="offer-end-days ">6 days remaining</div>
-                            <div class="discount ">15</div> <span class="off ">%</span><span class="off-text "">Off</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <div class=" container-fluid">
-        <div class="row how-does-works ">
-
-            <h3 class="text-center" style="padding-bottom: 50px;      color: #f27e3a;   font-family: 'Oleo Script Swash Caps';">How does works</h3>
-
-
-            <div class="col-md ">
-                <img src="Assets/svg/selectLocation.svg" alt="" class="location mx-md-5 " width="35%">
-                <h6 style="margin-left: 50px;" class="select-location">Select Lcation</h6>
-                <div class=" col-md-8">
-                    <div class=" text-center"><small>Select location where your
-                                                        food will be delivered</small></div>
-                </div>
-
-            </div>
-            <div class="col-md">
-                <img src="Assets/svg/chooseOrder.svg" alt="" class="mx-md-5 " width="35%">
-                <h6 style="margin-left: 50px;">Choose Order</h6>
-                <div class=" col-md-8">
-                    <div class="text-center"><small>check ours hundres of menu to
-                                                        pick your favourite food</small></div>
-                </div>
-
-            </div>
-            <div class="col-md">
-                <img src="Assets/svg/payAdvance.svg" alt="" width="35%" class="mx-md-5 ">
-                <h6 style="margin-left: 50px;">Pay Advance</h6>
-                <div class="col-md-8">
-                    <div class=" text-center"><small>its quick,simple.select
-                                                        several method </small></div>
-                </div>
-
-
-
-            </div>
-            <div class="col-md">
-                <img src="Assets/svg/enjoyMeal.svg" alt="" width="35%" class="mx-md-5 pt-md-4 pt-xs-10">
-                <h6 style="margin-left: 50px;">Enjoy meals</h6>
-                <div class="col-md-8">
-                    <div class=" text-center"><small>Foods made delivered directly
-                                                        to your time </small></div>
-                </div>
-
-
-
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="container popular-item position-relative">
-        <h3 class="text-center" style="  font-family: 'Oleo Script Swash Caps';position:relative;">
-            Popular item</h3>
-        <div class="swiper popular-item">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="Assets/img/05.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="icon "> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i> <i class="far fa-star"></i></div>
-                            <h5 class="card-title text-left">Spicy Meatballs <span class="price">$99</span></h5>
-                            <p class="card-text" style="color: #b2b2b2;"><small>Some quick
-                                                            example text to build on the card title and make up the bulk
-                                                            of the card's content.</small></p>
-                            <a href="#/" class="btn btn-order">Order Now</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="Assets/img/05.png" class="card-img-top" alt="..." width="100%">
-                        <div class="card-body">
-                            <div class="icon"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i> <i class="far fa-star"></i></div>
-                            <h5 class="card-title text-left">Spicy Meatballs <span class="price">$99</span></h5>
-                            <p class="card-text" style="color: #b2b2b2;"><small>Some quick
-                                                            example text to build on the card title and make up the bulk
-                                                            of the card's content.</small></p>
-                            <a href="#/" class="btn btn-order">Order Now</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="Assets/img/05.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="icon"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i> <i class="far fa-star"></i></div>
-                            <h5 class="card-title text-left">Spicy Meatballs <span class="price">$99</span></h5>
-                            <p class="card-text" style="color: #b2b2b2;"><small>Some quick
-                                                            example text to build on the card title and make up the bulk
-                                                            of the card's content.</small></p>
-                            <a href="#/" class="btn btn-order">Order Now</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="Assets/img/05.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="icon"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i> <i class="far fa-star"></i></div>
-                            <h5 class="card-title text-left">Spicy Meatballs <span class="price">$99</span></h5>
-                            <p class="card-text" style="color: #b2b2b2;"><small>Some quick
-                                                            example text to build on the card title and make up the bulk
-                                                            of the card's content.</small></p>
-                            <a href="#/" class="btn btn-order">Order Now</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="Assets/img/05.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="icon"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i> <i class="far fa-star"></i></div>
-                            <h5 class="card-title text-left">Spicy Meatballs <span class="price">$99</span></h5>
-                            <p class="card-text" style="color: #b2b2b2;"><small>Some quick
-                                                            example text to build on the card title and make up the bulk
-                                                            of the card's content.</small></p>
-                            <a href="#/" class="btn btn-order">Order Now</a>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <div class="container  featured-restaurants">
-        <h3 class="text-center" style="margin-top: 50px;  font-family: 'Oleo Script Swash Caps';position:relative;left: -30px;">
-            Featured Restaurnt</h3>
-
-        <div class="row">
-            <div class="col-md">
-                <div class="card text-left">
-
-                    <img src="Assets/img/10.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <img src="Assets/svg/logo01.svg" alt="">
-
-                        <h5 class="card-title"> Food World </h5>
-                        <i class="fas fa-star"><small> 46</small></i>
-                        <a href="#/" class="open-tomorrow">Opens Tomorrow</a>
-                        <div class="off-fast">
-                            <span class="off"><i class="fas fa-tag"></i> 20% Off</span>
-                            <span class="fast"><i class="fas fa-clock"></i> Fast </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <img src="Assets/img/11.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <img src="Assets/svg/logo02.svg" alt="">
-                        <h5 class="card-title"> Pizza Hub </h5>
-                        <i class="fas fa-star"><small> 50</small></i>
-                        <a href="#/" class="open-tomorrow">Opens Tomorrow</a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <img src="Assets/img/12.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <img src="Assets/svg/logo03.svg" alt="">
-                        <h5 class="card-title"> Donuts Hut </h5>
-                        <i class="fas fa-star"><small> 10</small></i>
-                        <a href="#/" class="open-now">Open Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <img src="Assets/img/13.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <img src="Assets/svg/logo04.svg" alt="">
-                        <h5 class="card-title"> Donus huts </h5>
-                        <i class="fas fa-star"><small> 25</small></i>
-                        <a href="#/" class="open-now">Open Now</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="row">
-            <div class="col-md">
-                <div class="card">
-                    <img src="Assets/img/14.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <img src="Assets/svg/logo05.svg" alt="">
-                        <h5 class="card-title"> Ruby Tuesday </h5>
-                        <i class="fas fa-star"><small> 46</small></i>
-                        <a href="#/" class="open-now">Open Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <img src="Assets/img/15.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <img src="Assets/svg/logo06.svg" alt="">
-                        <h5 class="card-title">Kukata Fried </h5>
-                        <i class="fas fa-star"><small> 50</small></i>
-                        <a href="#/" class="open-now">Open Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <img src="Assets/img/16.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <img src="Assets/svg/logo07.svg" alt="">
-                        <h5 class="card-title">Teco bely </h5>
-                        <i class="fas fa-star"><small> 10</small></i>
-                        <a href="#/" class="open-now">Open Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <img src="Assets/img/17.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <img src="Assets/svg/logo08.svg" alt="">
-                        <h5 class="card-title"> Red Square </h5>
-                        <i class="fas fa-star"><small> 25</small></i>
-                        <a href="#/" class="open-now">Open Now</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container-fluid Features">
-
-        <div class="card">
+    <!-- End mobile navbar -->
+    <div class="container-fluids efood">
+        <div class="card  bg-dark ">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md">
-                        <img src="Assets/svg/icon01.svg" alt="">
-                        <h3 style="left: 150px;top: -20px;">Daily <br> discount</h3>
+
+                        <img src="Assets/img/24.png" alt="" class="img-efood img-fluid float-end">
                     </div>
                     <div class="col-md">
-                        <img src="Assets/svg/icon02.svg" alt="">
+                        <h2>eFood</h2>
 
-                        <h3 style="left: 150px;top: -20px;">Live <br> Tracing</h3>
+                        <small class="text-grey">Fast food,italian,south indian,punjabi</small> <br> <label class="text-grey">TIME SQUARE</label>
+                        <br><br>
+                        <div class="row">
+                            <div class=" col">
+                                <i class="fas fa-star" style="font-size: 13px;"></i> 3.5
+                                <br>
+                                <lable class="text-grey">50+ rating</lable>
+
+                            </div>
+                            <div class="col-md d-none d-sm-none d-md-block">
+                                <div class="vertical "></div>
+                            </div>
+                            <div class=" col">
+                                32 mins
+                                <br>
+                                <small class="text-grey">Delivery Time</small>
+                            </div>
+                            <div class="col-md d-none d-sm-none d-md-block">
+                                <div class="vertical "></div>
+                            </div>
+                            <div class="col">
+                                200
+                                <br>
+                                <small class="text-grey ">Cost for Two</small>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col">
+                        <style>
 
-                    <div class="col-md">
-                        <img src="Assets/svg/icon03.svg" alt="">
-                        <h3 style="left: 150px;top: -20px;">Quick <br> Delivery</h3>
+                        </style>
+                        <div class="bg-dark offers d-none d-md-block d-sm-none">Offers</div>
+                        <div class="bg-dark offers-mobile">Offers</div>
+                        <div class="bg-dark row offer-border" style="border: 1px solid white;padding: 10px;">
+                            <div class="col-md-4 col-sm-2">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div class="col-md-8 col-sm-10">
+                                15% off up to 100rs. i use 100sbi above 400
+                            </div>
+                        </div>
+
                     </div>
-
-                </div>
-            </div>
-            <div class="vl" style="right: 1000px;top: -140px;"></div>
-            <div class="vl" style="right: 500px;top: -230px;"></div>
-
-        </div>
-
-
-        <div class="search-by-restaurant">
-            <a href="#/" class="view-all d-none d-sm-none d-md-block">View All <i class="fas fa-angle-right"></i></a>
-            <h3 style="margin-top: 50px; font-weight: bold; font-family: 'Sofia', sans-serif;margin-bottom: 50px;">
-                Search by Restaurants</h3>
-
-            <div class="row">
-                <div class="col-md">
-                    <img src="Assets/img/18.png">
-
-                    <b>Pizza</b>
-                </div>
-                <div class="col-md">
-                    <img src="Assets/img/19.png">
-                    <b>burger</b>
-                </div>
-                <div class="col-md">
-                    <img src="Assets/img/20.png">
-                    <b>noodles</b>
-                </div>
-                <div class="col-md">
-                    <img src="Assets/img/21.png">
-                    <b>subway</b>
-                </div>
-                <div class="col-md">
-                    <img src="Assets/img/22.png">
-                    <b>chowmein</b>
-                </div>
-                <div class="col-md">
-                    <img src="Assets/img/23.png">
-                    <b>Steak</b>
                 </div>
 
             </div>
         </div>
     </div>
-
-
     <style>
-        .our-customers {
-            background-image: url('Assets/img/04.png');
-        }
+
     </style>
 
 
-    <div class="container best-item">
-        <div class="card mb-3">
-            <div class="row g-0">
 
-                <div class="col-md-4">
-                    <div class="card-body" style="padding: 30bpx;padding-top: 100px;padding-left: 60px">
-                        <h2 class="card-title"><b>Best Deals</b><b style="color:#f9601e"> Crispy
-                                                    <br> Sandwiches</b> </h2>
-                        <p class="card-text">This is a wider card with supporting text below as e bit longer.</p>
-                        <p class="card-text"><button>PROCEED TO ORDER <i
-                                                        class="fas fa-angle-right"></i></button></p>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <img src="Assets/img/25.png" class="img-fluid rounded-start" alt="...">
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-8">
-                    <img src="Assets/img/26.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-4">
-                    <div class="card-body" style="padding: 30bpx;padding-top: 100px;padding-left: 60px">
-                        <h2 class="card-title"><b>Celebrate Parties with </b><b style="color:#f9601e">Fried Chiken</b></h2>
-                        <p class="card-text">This is a wider card with supporting text below as e bit longer.</p>
-                        <p class="card-text"><button>PROCEED TO ORDER <i
-                                                        class="fas fa-angle-right"></i></button></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row g-0">
-
-                <div class="col-md-4">
-                    <div class="card-body" style="padding: 30bpx;padding-top: 100px;padding-left: 60px">
-                        <h2 class="card-title"><b>Wanna eat hot & spicy</b>
-                            <b style="color:#f9601e">
-                                                    Pizaa?</b>
-                        </h2>
-                        <p class="card-text">This is a wider card with supporting text below as e bit longer.</p>
-                        <p class="card-text"><button>PROCEED TO ORDER <i
-                                                        class="fas fa-angle-right"></i></button></p>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <img src="Assets/img/27.png" class="img-fluid rounded-start" alt="...">
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <div class="container-fuid our-customers">
-
-        <div class="customers-container">
-            <h2 style="font-family: 'Sofia', sans-serif;"><i> Listen to our customers</i> </h2>
-            <div class="cusomers-tag d-none d-sm-none d-md-block    ">Get closer than ever to your customers. So close that you tell them what they need well before they realize it themselves.
-                <hr>
-            </div>
-
-        </div>
-        <div class="container">
-            <div class="row customers-review">
-                <div class="col-md">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="Assets/img/profile-1.jpg" class="customer-profile" alt="">
-                            <br> <span class="icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                            <div class="review" style="pading: 50px;">Some dish are ok but i love its price and delivery time is very fast</div>
-                            <div class="customer-name">Johny Depth</div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="Assets/img/profile-3.jpg" class="customer-profile" alt="">
-                            <br> <span class="icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                            <div class="review">I loved Pau bhaji and delivery time is very fast. i was take my order within 15 minutes.</div>
-                            <div class="customer-name">John Cena</div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="Assets/img/profile-7.jpg" class="customer-profile" alt="">
-                            <br> <span class="icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
-                            <div class="review">Dish are very testy at this price</div>
-                            <div class="customer-name">Tony kakkar</div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <footer class="bg-dark text-light" id="social-float ">
-        <h5>Our Top Cities</h5>
-        <div class="row cites">
-            <div class="col col-sm-6">
-                bhuj <br> mandvi <br> gandhi <br> anjar <br> naliya
-            </div>
-            <div class="col">
-                ahemdabad <br> surat <br> dang <br> rajkot <br> vadodara
-            </div>
-            <div class="col">
-                amritsar <br> bhatinda <br> chandigarah <br> sarhind <br> jalandar
-            </div>
-            <div class="col">
-                bareilly <br> Lucknow <br> agra <br> kanpur <br> Abupur
-            </div>
-            <div class="col">
-                amritsar <br> bhatinda <br> chandigarah <br> sarhind <br> jalandar
-            </div>
-
-
-        </div>
-        <hr>
+    <!-- <div class="container d-none d-lg-block" style="position: relative;top: -20px;left: 300px;">
         <div class="row">
-            <div class="col-2 col-sm-4">
-                <b>company</b>
-                <br>
-                <br> about us
-                <br> Team
-                <br> Careers
-                <br> Blog
-            </div>
-            <div class="col-2 col-sm-4">
-                <b> contact</b>
-                <br>
-                <br> Help & Support
-                <br> Partner with us
-                <br> Ride with us
+            <div class="col-md-4">
+
+
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="+91">India</option>
+
+                    <option value="Sand vish">
+                    <option value="chowmin">
+
+                </datalist>
 
             </div>
-            <div class="col-2 col-sm-4">
-                <b>legal</b>
-                <br>
-                <br> Tearms & Condition
-                <br> Refund & cancellation
-                <br> Privacy Policy
-                <br> cookie Policy
+            <div class="col-md-2">
+
+                <input class="form-control" list="type" id="exampleDataList" placeholder="Veg Only">
+                <datalist id="type">
+                    <option value="None Veg">
+                    <option value="Veg">
+
+                </datalist>
             </div>
-            <div class="col-md">
+        </div>
+    </div> -->
+    <div class="container" style="margin-top: 20px; height: 90vh;">
+        <input checked="checked" id="tab1" type="radio" name="tab" data-tab="tab1" />
+        <input id="tab2" type="radio" name="tab" data-tab="tab2" />
+
+        <nav style="margin-top: 10px;">
+            <label for="tab1" data-tab-label="tab1" role="tab">
+                <h4>Order Online</h4>
+            </label> <label for="tab2" data-tab-label="tab2" role="tab">
+                <h4>Review</h4>
+            </label>
+
+
+        </nav>
+        <style>
+            .categoary {
+                border: none;
+                background-color: white;
+                padding: 0;
+            }
+        </style>
+
+        <nav class="navbar categoary navbar-expand-lg navbar-light bg-light d-block d-sm-block d-lg-none">
+            <div class="container-fluid" style="background-color: white;border: none;">
+                <a class="navbar-brand" href="#">Categoary</a>
+                <button class="navbar-toggler" type="button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+
+        </nav>
+        <style>
+            .top-offcanvas {
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-left: 50px;
+                margin-right: 50px;
+                border-radius: 10px;
+            }
+            
+            .top-offcanvas .nav-link {
+                color: var(--primary-color);
+            }
+        </style>
+        <div class="offcanvas top-offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasTopLabel">Categoarys</h5>
+                <a href="#" class="close-button" data-bs-dismiss="offcanvas" aria-label="Close"></a>
 
             </div>
-            <div class="col-4">
-                <b>Follow us</b><br>
-                <div class="icons-social-media"><i class="fab fa-instagram"></i> <i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i></div>
+            <div class="offcanvas-body">
+                <div class="col-2 order-list-group">
+                    <nav id="myScrollspy" style="border-style: none;">
+                        <ul class="nav nav-pills flex-column text-right">
+                            <li class="nav-item"><a class="nav-link " href="#content-Recommended">Recommended</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" onclick="scroll('#content-Family')" href="#content-Family">Family</a></li>
+                            <li class="nav-item"><a class="nav-link" id="combo" href="#content-combo">Combo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
 
-                <h6 style="margin-bottom: 20px;">Receive exclusive offers in your mailbox</h6>
-                <div class="icon-container text-left d-none d-sm-none">
-                    <div class="input-container">
-                        <i class="fas fa-envelope icon"></i>
-                        <input class="input-field" type="text" placeholder="Enter Your Address" name="usrnm">
-                        <div>
-                            <button class="btn btn-subscribe">
-                                
-                            Subscribe</button>
+        <style>
+            .order-list-group {
+                border-style: none;
+            }
+            
+            .close-button {
+                padding: 10px;
+                height: 10px;
+                width: 10px;
+                position: relative;
+                box-sizing: border-box;
+                line-height: 40px;
+                display: inline-block;
+            }
+            
+            .close-button:before,
+            .close-button:after {
+                transform: rotate(-45deg);
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -5px;
+                margin-left: -25px;
+                display: block;
+                height: 02px;
+                width: 30px;
+                background-color: #000;
+                transition: all 0.25s ease-out;
+            }
+            
+            .close-button:after {
+                transform: rotate(-135deg);
+            }
+            
+            .close-button:hover:before,
+            .close-button:hover:after {
+                transform: rotate(0deg);
+            }
+        </style>
+        <section data-tab-panel="tab1" role="tabpanel" aria-labelledby="tab1">
+            <div class="row">
+                <div class="col-2 order-list-group">
+                    <nav id="myScrollspy" style="border-style: none;">
+                        <ul class="nav nav-pills flex-column text-right d-none d-lg-block">
+                            <li class="nav-item"><a class="nav-link actives" href="#content-Recommended">Recommended</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" onclick="scroll('#content-Family')" href="#content-Family">Family</a></li>
+                            <li class="nav-item"><a class="nav-link" id="combo" href="#content-combo">Combo</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
+                <div class="col-md-10  orders">
+                    <div data-spy="scroll" class="sroll-order" style="height: 90vh" data-target="#myScrollspy" data-offset="10">
+                        <h4 id="content-Recommended">Recommended</h4>
+                        <p>
+                            <div class="card ">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/13.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button type="button" class="btn" data-name="pizza" data-price="$40">Add
+                                            +</button>
+                                        </div>
+                                    </div>
 
-                        </div>
+                                </div>
+                            </div>
+                            <div class="card ">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/13.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
 
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/15.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/16.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/17.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </p>
+                        <h4 id="content-Family">Family </h4>
+                        <p>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/13.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/14.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button type="button" class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/15.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/16.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/17.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </p>
+                        <h4 id="content-combo">Combo</h4>
+                        <p>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/13.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/14.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button type="button" class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/15.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/16.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <img src="Assets/img/17.png" alt="" class="product-img">
+                                        </div>
+                                        <div class="col-md">
+                                            <h3>Italian Pizza</h3>
+                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
+                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
+                                        </div>
+                                        <div class="col-md">
+                                            <button class="btn">Add +</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </p>
                     </div>
-
                 </div>
             </div>
 
-        </div>
-    </footer>
+            </div>
+        </section>
+        <section data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab1">
+            Second Tab Panel
+        </section>
+        <section data-tab-panel="tab3" role="tabpanel" aria-labelledby="tab1">
+            Third Tab Panel
+        </section>
+
+
+
+    </div>
+
 </body>
 
 </html>
-
-<!-- Scripts -->
-
-<!-- Jquery CDN -->
-<script src=" https://code.jquery.com/jquery-3.6.0.js " integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
-
-<!-- Boostrap JavaScript -->
-<script src="Assets/js/bootstrap.js "></script>
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
-
-<!-- Custom Js -->
-<script src="Assets/js/main.js "></script>
-
-<!-- End Scripts -->
