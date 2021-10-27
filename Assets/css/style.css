@@ -655,7 +655,6 @@ media-queries
         
         .orders .card {
             border-style: none;
-            z-index: -1;
         }
         
         .product-img {
@@ -669,8 +668,6 @@ media-queries
             border-color: #ff0808;
             color: #ff0808;
             position: relative;
-            left: 200px;
-            z-index: 1;
             cursor: pointer;
             margin: 15px 0;
         }
@@ -680,6 +677,12 @@ media-queries
             border-color: #ff9999;
             color: white;
             cursor: pointer;
+        }
+        
+        .btn-check:focus+.btn,
+        .btn:focus {
+            box-shadow: 0 0 0 0.25rem #ff9999;
+            border: #ff9999;
         }
         
         .cart-mobile {
@@ -817,7 +820,6 @@ media-queries
             border-color: #e9ecee;
             border-radius: 10px;
             padding: 20px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
         
         .btn-scs {
@@ -879,6 +881,7 @@ media-queries
         
         .quantity {
             display: inline-block;
+            background-color: #efefef;
         }
         
         .quantity .input-text.qty {

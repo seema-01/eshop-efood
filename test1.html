@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src=" https://code.jquery.com/jquery-3.6.0.js " integrity=" sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
 
     <!-- Boostrap Css -->
     <link rel="stylesheet" href="Assets/css/bootstrap.css">
@@ -22,201 +23,109 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Custom Css -->
-    <link rel="stylesheet" href="Assets/css/style.css">
+    <!-- <link rel="stylesheet" href="Assets/css/style.css"> -->
     <title>eFood | eShop - Online Food ordering</title>
 </head>
 <style>
-    body {
-        font-family: 'Open Sans Pro';
+    .sroll-order {
+        height: 100px;
+        overflow-y: scroll;
+        padding: 5px;
+        border-left: 1px solid #bebebe;
+        scroll-behavior: smooth;
+    }
+    
+    .quantity {
+        display: inline-block;
+        background-color: #e9ecee;
+    }
+    
+    .quantity .input-text.qty {
+        width: 35px;
+        height: 41px;
+        padding: 0 5px;
+        color: #007f00;
+        text-align: center;
+        border-left: 1px solid #efefef;
+        border-right: 1px solid #efefef;
+        border-top: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+        background-color: #e9ecee;
+        border-radius: 10px;
+    }
+    
+    .quantity .input-text.qty:focus {
+        border: 1px solid #efefef;
+    }
+    
+    .quantity.red {
+        text-align: left;
+        position: relative;
+        white-space: nowrap;
+        vertical-align: top;
+        border: 1px solid red;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .quantity.buttons_added {
+        text-align: left;
+        position: relative;
+        white-space: nowrap;
+        vertical-align: top;
+        border: 1px solid #c6c7c7;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .quantity.buttons_added input {
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+        box-shadow: none;
+        border-radius: 15px;
+    }
+    
+    .quantity.buttons_added .minus,
+    .quantity.buttons_added .plus {
+        padding: 7px 10px 8px;
+        height: 41px;
+        color: #007f00;
+        background-color: #e9ecee;
+        border: 1px solid #efefef;
+        cursor: pointer;
+    }
+    
+    .quantity.buttons_added .minus {
+        border-right: 0;
+    }
+    
+    .quantity.buttons_added .plus {
+        border-left: 0;
+    }
+    
+    .quantity.buttons_added .minus:hover,
+    .quantity.buttons_added .plus:hover {
+        background: #eeeeee;
+    }
+    
+    .quantity input::-webkit-outer-spin-button,
+    .quantity input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin: 0;
+    }
+    
+    .quantity.buttons_added .minus:focus,
+    .quantity.buttons_added .plus:focus {
+        outline: none;
     }
 </style>
 
+
 <body>
-    <nav id="navbar_top" class="navbar navbar-expand-lg  navbar-light">
-        <div class="container-fluid ">
-            <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block" style="margin-left: 200px;">
-            <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
 
-            <button class="btn d-block d-lg-none d-md-none  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <div class="icon-container collapse navbar-collapse" id="navbarSupportedContent">
-                            <div class="input-container">
-                                <i class="fas fa-map-marker-alt icon"></i>
-                                <input class="input-field" type="text" placeholder="Enter Your Address" name="usrnm">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-primary"><i class="fas fa-search icon-search"></i> Find Food</button>
-                    </li>
-                    <li class="nav-item">
-
-                        <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Login
-                        </button>
-
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-login" data-bs-toggle="modal" data-bs-target="#signup">
-                            Sign Up
-                        </button>
-                    </li>
-
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-
-    <style>
-
-    </style>
-    <div id="mybutton">
-
-        <div class="row">
-            <div class="col-md">
-                <a class=" cart-mobile nav-link   d-block d-lg-none  d-sm-block" href="#/"><i
-                            class="fas fa-shopping-cart">
-                        </i> Order now</a>
-            </div>
-            <div class="col-md">
-
-            </div>
-        </div>
-    </div>
-    <style>
-        .nav-mb {
-            border-radius: 10px;
-        }
-    </style>
-    <!-- Mobile Navbar -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel">Eshop</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body " style="background-color: var(--primary-color);">
-            <nav class="navbar nav-mb navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-
-                    <div class="" id="">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="border-radius: 100px; ">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fas fa-percentage"> O</i>ffers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fas fa-life-ring"> </i>Help</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fab fa-opencart "> </i>Cart</a>
-                            </li>
-                            <li class="nav-item">
-                                <button class="btn btn-primary">Logout</button>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- End mobile navbar -->
-    <div class="container-fluids efood">
-        <div class="card  bg-dark ">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md">
-
-                        <img src="Assets/img/24.png" alt="" class="img-efood img-fluid float-end">
-                    </div>
-                    <div class="col-md">
-                        <h2>eFood</h2>
-
-                        <small class="text-grey">Fast food,italian,south indian,punjabi</small> <br> <label class="text-grey">TIME SQUARE</label>
-                        <br><br>
-                        <div class="row">
-                            <div class=" col">
-                                <i class="fas fa-star" style="font-size: 13px;"></i> 3.5
-                                <br>
-                                <lable class="text-grey">50+ rating</lable>
-
-                            </div>
-                            <div class="col-md d-none d-sm-none d-md-block">
-                                <div class="vertical "></div>
-                            </div>
-                            <div class=" col">
-                                32 mins
-                                <br>
-                                <small class="text-grey">Delivery Time</small>
-                            </div>
-                            <div class="col-md d-none d-sm-none d-md-block">
-                                <div class="vertical "></div>
-                            </div>
-                            <div class="col">
-                                200
-                                <br>
-                                <small class="text-grey ">Cost for Two</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <style>
-
-                        </style>
-                        <div class="bg-dark offers d-none d-md-block d-sm-none">Offers</div>
-                        <div class="bg-dark offers-mobile">Offers</div>
-                        <div class="bg-dark row offer-border" style="border: 1px solid white;padding: 10px;">
-                            <div class="col-md-4 col-sm-2">
-                                <i class="fas fa-percentage"></i>
-                            </div>
-                            <div class="col-md-8 col-sm-10">
-                                15% off up to 100rs. i use 100sbi above 400
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <style>
-
-    </style>
-
-
-
-    <!-- <div class="container d-none d-lg-block" style="position: relative;top: -20px;left: 300px;">
-        <div class="row">
-            <div class="col-md-4">
-
-
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                <datalist id="datalistOptions">
-                    <option value="+91">India</option>
-
-                    <option value="Sand vish">
-                    <option value="chowmin">
-
-                </datalist>
-
-            </div>
-            <div class="col-md-2">
-
-                <input class="form-control" list="type" id="exampleDataList" placeholder="Veg Only">
-                <datalist id="type">
-                    <option value="None Veg">
-                    <option value="Veg">
-
-                </datalist>
-            </div>
-        </div>
-    </div> -->
-    <div class="container" style="margin-top: 20px; height: 90vh;">
+    <div class="container" style="margin-top: 20px; height: 70vh;">
         <input checked="checked" id="tab1" type="radio" name="tab" data-tab="tab1" />
         <input id="tab2" type="radio" name="tab" data-tab="tab2" />
 
@@ -333,7 +242,7 @@
                 </div>
 
                 <div class="col-md-10  orders">
-                    <div data-spy="scroll" class="sroll-order" style="height: 90vh" data-target="#myScrollspy" data-offset="10">
+                    <div data-spy="" class="sroll-order" style="height: 65vh" data-target="#" data-offset="10">
                         <h4 id="content-Recommended">Recommended</h4>
                         <p>
                             <div class="card ">
@@ -347,9 +256,12 @@
                                             <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
                                             <br> <br> Macaroni, Onion, Capsicum and bell pepper.
                                         </div>
-                                        <div class="col-md">
+                                        <div class="col-md" id="add">
                                             <button type="button" class="btn" data-name="pizza" data-price="$40">Add
-                                            +</button>
+                                    +</button>
+
+
+
                                         </div>
                                     </div>
 
@@ -366,13 +278,58 @@
                                             <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
                                             <br> <br> Macaroni, Onion, Capsicum and bell pepper.
                                         </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
+                                        <div class="col-md add">
+                                            <button class="btn" onclick="add(this)">Add +</button>
                                         </div>
+
+                                        <script>
+                                            function add(element) {
+
+                                                $(element).parent().html('<div id="quantity" class="quantity buttons_added"> <input type="button" onclick="minus(this)" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" id="input" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" onclick="plus(this)" value="+"class="plus"></div></div>');
+                                            }
+
+                                            function plus(element) {
+
+                                                var a = document.getElementById('input').value
+                                                if (Number(a) >= 10) {
+                                                    $('.quantity buttons_added').removeClass('buttons_added')
+                                                    $('.quantity ').addClass('red')
+                                                    $('#input').val(10)
+                                                    $('#input').val(10)
+                                                } else if (Number(a) < 0) {
+                                                    $('.quantity buttons_added').removeClass('buttons_added')
+                                                    $('.quantity ').addClass('red')
+                                                    $('#input').val(0)
+                                                } else {
+                                                    $('#input').val(Number(a) + 1)
+                                                }
+                                            }
+
+                                            function minus(element) {
+
+                                                var a = document.getElementById('input').value
+
+                                                if (Number(a) == 0) {
+                                                    $('#input').val(Number(a) * 0)
+                                                } else if (Number(a) < 0) {
+                                                    $('.quantity buttons_added').removeClass('buttons_added')
+                                                    $('.quantity ').addClass('red')
+                                                    $('#input').val(0)
+                                                } else if (Number(a) > 10) {
+                                                    $('.quantity buttons_added').removeClass('buttons_added')
+                                                    $('.quantity ').addClass('red')
+                                                    $('#input').val(10)
+                                                } else {
+                                                    $('#input').val(Number(a) - 1)
+                                                }
+                                            }
+                                        </script>
                                     </div>
 
                                 </div>
                             </div>
+                            <script>
+                            </script>
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
@@ -618,7 +575,8 @@
                 </div>
             </div>
 
-            </div>
+
+
         </section>
         <section data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab1">
             Second Tab Panel
@@ -629,8 +587,13 @@
 
 
 
-    </div>
+        </div>
+
+
+
+
 
 </body>
+
 
 </html>
