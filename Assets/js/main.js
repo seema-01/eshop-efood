@@ -109,47 +109,43 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 function add(element) {
 
-    $(element).parent().html('<div id="quantity" class="quantity buttons_added"> <input type="button" onclick="minus(' + 'input' + ')" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" id="input" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" onclick="plus(' + 'input' + ')" value="+"class="plus"></div></div>');
+    $(element).parent().html(' <div id="quantity" class="quantity buttons_added">' +
+        '<button type="button" value="-" id="minus" onclick="minus(this)" class="minus">-</button>' +
+        ' <input type="number" min="1" max="10" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">' +
+        '      <button type="button" value="+" id="plus" onclick="plus( this )" class="minus">+</button>' +
+        '</div>').show('slow'.showNext);
 }
 
-function remove(element) {
-    $(element).parent().html('      <button class="btn" onclick="add(this)">Add +</button>')
-}
 
-function plus(element) {
+var total = 0;
 
-    var a = document.getElementById('input').value
-    if (Number(a) >= 10) {
-        $('.quantity buttons_added').removeClass('buttons_added')
-        $('.quantity ').addClass('red')
-        $('#input').val(10)
-    } else if (Number(a) < 0) {
-        $('.quantity buttons_added').removeClass('buttons_added')
-        $('.quantity ').addClass('red')
-        $('#input').val(0)
+
+function minus(element) {
+    var input = $(element).parent().find('input')
+    if (Number(input.val()) <= 1) {
+        var remove = $(element).parent()
+        remove.parent().html('   <button class="btn" onclick="add(this)">Add +</button>')
     } else {
-        $('#input').val(Number(a) + 1)
+
+        input.val(Number(input.val()) - 1)
+
+
     }
 }
 
-function minus(element) {
-
-    var a = document.getElementById('input').value
-
-    if (Number(a) == 0) {
-        remove(this)
-    } else if (Number(a) < 0) {
-        $('.quantity buttons_added').removeClass('buttons_added')
-        $('.quantity ').addClass('red')
-        $('#input').val(0)
-    } else if (Number(a) > 10) {
-        $('.quantity buttons_added').removeClass('buttons_added')
-        $('.quantity ').addClass('red')
-        $('#input').val(10)
+function plus(element) {
+    var input = $(element).parent().find('input')
+    if (Number(input.val()) >= 10) {
+        input.val(10)
+    } else if (Number(input.val()) < 1) {
+        input.val(1)
     } else {
-        $('#input').val(Number(a) - 1)
+
+        input.val(Number(input.val()) + 1)
+
     }
 }
 

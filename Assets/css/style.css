@@ -24,80 +24,80 @@ media-queries
             background-color: white;
         }
         
-        .icon-container .icon-map {
-            position: absolute;
-            display: flex;
-            padding-top: 0.5rem;
-            left: 28.5%;
-            top: 20%;
-            color: tomato;
-        }
-        
-        .input-container {
-            display: flex;
-            width: 100%;
-            margin-bottom: 15px;
-        }
-        
-        .navbar .icon {
+        .location span {
+            background-color: var(--secondary-color);
+            border-right: none;
+            border-radius: 8px;
             padding: 10px;
-            left: 50px;
-            top: 05px;
-            position: relative;
-            color: #f96220;
-            min-width: 50px;
+            border-top: 2px solid #c8c8c8;
+            border-left: 2px solid #c8c8c8;
+            border-bottom: 2px solid #c8c8c8;
         }
         
-        .input-field {
-            width: 100%;
+        .location i {
+            color: var(--primary-color);
+        }
+        
+        .location input {
+            border-left: white;
+            border-top: 2px solid #c8c8c8;
+            border-right: 2px solid #c8c8c8;
+            border-bottom: 2px solid #c8c8c8;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
             padding: 10px;
-            outline: none;
         }
         
-        .icon-container input {
-            background-color: #f4f4f4;
-            border: solid #f4f4f4;
-            border-radius: 10px;
-            padding-left: 40px;
-            width: 20rem;
-            font-size: 0.8rem;
-            margin-right: 2rem;
+        .location input:focus {
+            box-shadow: none;
+            border-color: #ced4da;
+            background-color: var(--secondary-color);
+        }
+        
+         :root {
+            --primary-color: #f96220;
+            --white-color: #ffff;
+            --secondary-color: #f5f5f5;
+            --secondary-b-color: #d9d9d9;
         }
         
         .btn-primary {
-            color: white;
-            background-color: #fc6e4d;
-            border: solid #fc6e4d;
-            border-radius: 07px;
-            font-size: 18px;
-            margin-right: 2rem;
-        }
-        
-        .btn-primary:focus {
-            background-color: #fd8b71;
-            border: solid #fd8b71;
-            box-shadow: none;
-        }
-        
-        .btn-primary:active {
-            background-color: #fd8b71;
-            border: solid #fd8b71;
-            box-shadow: none;
-        }
-        
-        .btn-primary:active:focus {
-            box-shadow: none;
+            padding: 10px;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            border: 2px solid var(--primary-color);
         }
         
         .btn-primary:hover {
-            background-color: #fd8b71;
-            border: solid #fd8b71;
+            background-color: var(--primary-color);
+            border: 2px solid var(--primary-color);
         }
         
-        .btn-login {
-            font-size: 18px;
-            margin: 5px;
-            background-color: #f4f4f4;
+        .btn-primary:focus {
+            background-color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: var(--primary-color);
+            ;
+        }
+        
+        .btn-secondary {
+            padding: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            color: #c8c8c8;
+            border: 2px solid var(--secondary-b-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-color);
+            border: 2px solid #c8c8c8;
+            color: #c8c8c8;
+        }
+        
+        .btn-secondary:focus {
+            background-color: var(--secondary-color);
+            border: 2px solid #c8c8c8;
+            color: #c8c8c8;
         }
         
         .body-container {
@@ -679,8 +679,7 @@ media-queries
             cursor: pointer;
         }
         
-        .btn-check:focus+.btn,
-        .btn:focus {
+        .btn-check:focus {
             box-shadow: 0 0 0 0.25rem #ff9999;
             border: #ff9999;
         }
@@ -881,7 +880,7 @@ media-queries
         
         .quantity {
             display: inline-block;
-            background-color: #efefef;
+            background-color: #e9ecee;
         }
         
         .quantity .input-text.qty {
@@ -890,16 +889,16 @@ media-queries
             padding: 0 5px;
             color: #007f00;
             text-align: center;
-            border-left: 1px solid #efefef;
-            border-right: 1px solid #efefef;
-            border-top: 1px solid #efefef;
-            border-bottom: 1px solid #efefef;
+            border-left: 1px solid #e9ecee;
+            border-right: 1px solid #e9ecee;
+            border-top: 1px solid #e9ecee;
+            border-bottom: 1px solid #e9ecee;
             background-color: #e9ecee;
             border-radius: 10px;
         }
         
         .quantity .input-text.qty:focus {
-            border: 1px solid #efefef;
+            border: 1px solid #e9ecee;
         }
         
         .quantity.buttons_added {
@@ -907,12 +906,20 @@ media-queries
             position: relative;
             white-space: nowrap;
             vertical-align: top;
-            border: 1px solid #c6c7c7;
+            border: 1px solid #e9ecee;
             border-radius: 10px;
             margin-bottom: 10px;
         }
         
         .quantity.buttons_added input {
+            display: inline-block;
+            margin: 0;
+            vertical-align: top;
+            box-shadow: none;
+            border-radius: 10px;
+        }
+        
+        .quantity.buttons_added button {
             display: inline-block;
             margin: 0;
             vertical-align: top;
@@ -926,8 +933,9 @@ media-queries
             height: 41px;
             color: #007f00;
             background-color: #e9ecee;
-            border: 1px solid #efefef;
+            border: 1px solid #e9ecee;
             cursor: pointer;
+            border-radius: 10px;
         }
         
         .quantity.buttons_added .minus {
@@ -940,7 +948,7 @@ media-queries
         
         .quantity.buttons_added .minus:hover,
         .quantity.buttons_added .plus:hover {
-            background: #eeeeee;
+            background: #e9ecee;
         }
         
         .quantity input::-webkit-outer-spin-button,

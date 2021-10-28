@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
+    <link rel="icon" href="Assets/img/favicon-logo.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <!-- Boostrap Css -->
@@ -33,40 +33,94 @@
 
 <body id="back_to_top">
     <!-- Header -->
-    <nav id="navbar_top" class="navbar navbar-expand-lg  navbar-light">
-        <div class="container-fluid ">
-            <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block" style="margin-left: 200px;">
-            <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
-
-            <button class="btn d-block d-lg-none d-md-none  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <div class="icon-container collapse navbar-collapse" id="navbarSupportedContent">
-                            <div class="input-container">
-                                <i class="fas fa-map-marker-alt icon"></i>
-                                <input class="input-field" type="text" placeholder="Enter Your Address" name="usrnm">
-                            </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block">
+                <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
+            </a>
+            <button class="btn d-block d-lg-none d-md-block  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
+                class="navbar-toggler-icon"></span></button>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-4">
+                        <div class="input-group location">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control col-12" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary"><i class="fas fa-search icon-search"></i> Find Food</button>
+                        <button class="btn btn-primary  px-5 ">
+                            <i class="fas fa-search icon-search"></i> Find Food
+                        </button>
                     </li>
-                    <li class="nav-item" style="font-size: 18px;">
+
+                    <li class="nav-item mx-2 pt-1">
                         <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage" > </i> Offers</a>
                     </li>
-                    <li class="nav-item fw-bold" style="font-size: 18px;">
-                        <a class="nav-link" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
                     </li>
-                    <li class="nav-item fw-bold" style="font-size: 18px;">
-                        <a class="nav-link" href="#/"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="cart.html"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
                     </li>
+
+
                 </ul>
 
             </div>
         </div>
     </nav>
+
+
+
+
+    <div class="offcanvas offcanvas-end text-center" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+            <nav class="navbar navbar-light teal lighten-4">
+
+                <div>
+
+
+                    <ul class="navbar-nav mr-auto" style="font-size: 25px;">
+                        <div class="container">
+                            <li class="">
+                                <div class="input-group location">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input type="text" class="form-control " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </li>
+                            <li class="nav-item col-12">
+                                <button class="btn btn-primary  px-5 mt-3 mb-2">
+                                    <i class="fas fa-search icon-search"></i> Find Food
+                                </button>
+                            </li>
+
+
+                            <li class="nav-item mt-3 pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage" > </i> Offers</a>
+                            </li>
+                            <li class="nav-item mt-3  pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
+                            </li>
+                            <li class="nav-item mt-3  pt-1">
+                                <a class="nav-link fw-bold" href="cart.html"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <!-- Links -->
+
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+        </div>
+    </div>
+
 
 
 
@@ -92,44 +146,12 @@
             border-radius: 10px;
         }
     </style>
-    <!-- Mobile Navbar -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel">Eshop</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body " style="background-color: var(--primary-color);">
-            <nav class="navbar nav-mb navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
 
-
-                    <div class="" id="">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="border-radius: 100px; ">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fas fa-percentage"> O</i>ffers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fas fa-life-ring"> </i>Help</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fab fa-opencart "> </i>Cart</a>
-                            </li>
-                            <li class="nav-item">
-                                <button class="btn btn-primary">Logout</button>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- End mobile navbar -->
-    <div class="container-fluid p-2 bg-dark text-light">
+    <div class="container-fluid p-2 bg-dark text-light pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
-                    <img src="Assets/img/24.png" class="img-fluid" alt="" width="100%">
+                    <img src="Assets/img/24.png" class="img-fluid rounded" alt="" width="100%">
 
                 </div>
                 <div class="col-md-4 mb-3 col-sm-12">
@@ -233,19 +255,7 @@
 
 
         </nav>
-        <style>
-            .top-offcanvas {
-                margin-top: 100px;
-                margin-bottom: 100px;
-                margin-left: 50px;
-                margin-right: 50px;
-                border-radius: 10px;
-            }
-            
-            .top-offcanvas .nav-link {
-                color: var(--primary-color);
-            }
-        </style>
+
         <div class="offcanvas top-offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
             <div class="offcanvas-header">
                 <h5 id="offcanvasTopLabel">Categoarys</h5>
@@ -749,6 +759,7 @@
 
 
 </body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

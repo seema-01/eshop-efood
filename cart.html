@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
+    <link rel="icon" href="Assets/img/favicon-logo.png" type="image/x-icon">
 
     <!-- Boostrap Css -->
     <link rel="stylesheet" href="Assets/css/bootstrap.css">
@@ -33,76 +33,97 @@
 
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-fluid ">
-            <img src="Assets/img/logo.PNG" alt="">
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block">
+                <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
+            </a>
+            <button class="btn d-block d-lg-none d-md-block  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
+                class="navbar-toggler-icon"></span></button>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent 	d-none d-md-block d-sm-none">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <div class="icon-container collapse navbar-collapse" id="navbarSupportedContent">
-                            <div class="input-container">
-                                <i class="fas fa-map-marker-alt icon"></i>
-                                <input class="input-field" type="text" placeholder="Enter Your Address" name="usrnm">
-                            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-4">
+                        <div class="input-group location">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control col-12" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary"><i class="fas fa-search icon-search"></i> Find Food</button>
+                        <button class="btn btn-primary  px-5 ">
+                            <i class="fas fa-search icon-search"></i> Find Food
+                        </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#/"><i class="fas fa-percentage" > O</i>ffers</a>
+
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage" > </i> Offers</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#/"><i class="fas fa-life-ring" > </i>Help</a>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#/"><i class="fab fa-opencart " > </i>Cart</a>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
                     </li>
+
+
                 </ul>
 
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Navbar -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+
+
+
+    <div class="offcanvas offcanvas-end text-center" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel">Eshop</h5>
+            <h5 id="offcanvasRightLabel"></h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body " style="background-color: var(--primary-color);">
-            <nav class="navbar nav-mb navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+        <div class="offcanvas-body ">
+            <nav class="navbar navbar-light teal lighten-4">
+
+                <div>
 
 
-                    <div class="" id="">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="border-radius: 100px; ">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fas fa-percentage" > O</i>ffers</a>
+                    <ul class="navbar-nav mr-auto" style="font-size: 25px;">
+                        <div class="container">
+                            <li class="">
+                                <div class="input-group location">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input type="text" class="form-control " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fas fa-life-ring" > </i>Help</a>
+                            <li class="nav-item col-12">
+                                <button class="btn btn-primary  px-5 mt-3 mb-2">
+                                    <i class="fas fa-search icon-search"></i> Find Food
+                                </button>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#/"><i class="fab fa-opencart " > </i>Cart</a>
-                            </li>
-                            <li class="nav-item">
-                                <button class="btn btn-primary">Logout</button>
-                            </li>
-                        </ul>
 
-                    </div>
+
+                            <li class="nav-item mt-3 pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage" > </i> Offers</a>
+                            </li>
+                            <li class="nav-item mt-3  pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
+                            </li>
+                            <li class="nav-item mt-3  pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <!-- Links -->
+
                 </div>
+                <!-- Collapsible content -->
+
             </nav>
         </div>
     </div>
+
     <!-- End mobile navbar -->
 
-    <div class="container-fluid" style="margin-top: 80px;">
+    <div class="container-fluid mt-4">
         <div class="row ">
 
             <div class="col-md-1">
@@ -119,8 +140,8 @@
                                 <img src="" alt="">
                                 <h1>Account</h1>
                                 <span style="color:#b4b6b7;"> To place your order ,log in to your existing account or sign up</span><br><br>
-                                <button class=" btn-scs"><small>Have an account?</small> <br> <b>Log in</b></button>
-                                <button class="btn-scs"><small>New you efood?</small> <br> <b>Sign up</b></button>
+                                <button class=" btn-scs mt-1 mb-2"><small>Have an account?</small> <br> <b>Log in</b></button>
+                                <button class="btn-scs "><small>New you efood?</small> <br> <b>Sign up</b></button>
                             </div>
                             <div class="col-md-4">
                                 <img src="Assets/img/hot-dish.png" alt="" width="100%" style="margin-top: 50px;">
@@ -167,53 +188,53 @@
                             <div class="row">
                                 <div class="col-4">
                                     <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
-                                <div class="col-6">
+                                <div class="col-5">
                                     <div class="quantity buttons_added">
                                         <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
                                             class="plus">
                                     </div>
                                 </div>
-                                <div class="col-2">
-                                    <h5><b>$40</b></h5>
+                                <div class="col-3">
+                                    <h5 class='mt-2'><b>$40</b></h5>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4">
                                     <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
-                                <div class="col-6">
+                                <div class="col-5">
                                     <div class="quantity buttons_added">
                                         <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
                                             class="plus">
                                     </div>
                                 </div>
-                                <div class="col-2">
-                                    <h5><b>$40</b></h5>
+                                <div class="col-3">
+                                    <h5 class='mt-2'><b>$40</b></h5>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4">
                                     <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
-                                <div class="col-6">
+                                <div class="col-5">
                                     <div class="quantity buttons_added">
                                         <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
                                             class="plus">
                                     </div>
                                 </div>
-                                <div class="col-2">
-                                    <h5><b>$40</b></h5>
+                                <div class="col-3">
+                                    <h5 class='mt-2'><b>$40</b></h5>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4">
                                     <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
-                                <div class="col-6">
+                                <div class="col-5">
                                     <div class="quantity buttons_added">
                                         <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
                                             class="plus">
                                     </div>
                                 </div>
-                                <div class="col-2">
-                                    <h5><b>$40</b></h5>
+                                <div class="col-3">
+                                    <h5 class='mt-2'><b>$40</b></h5>
                                 </div>
                             </div>
                             <style>
@@ -299,7 +320,7 @@
 
                             </div>
 
-                            <h6><b>Bill details</b> </h6>
+                            <h6 class="mt-4"><b>Bill details</b> </h6>
                             <div class="row">
                                 <div class="col-md-10 ">
                                     item total
