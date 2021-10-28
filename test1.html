@@ -23,577 +23,109 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Custom Css -->
-    <!-- <link rel="stylesheet" href="Assets/css/style.css"> -->
+    <link rel="stylesheet" href="Assets/css/style.css">
     <title>eFood | eShop - Online Food ordering</title>
 </head>
-<style>
-    .sroll-order {
-        height: 100px;
-        overflow-y: scroll;
-        padding: 5px;
-        border-left: 1px solid #bebebe;
-        scroll-behavior: smooth;
-    }
-    
-    .quantity {
-        display: inline-block;
-        background-color: #e9ecee;
-    }
-    
-    .quantity .input-text.qty {
-        width: 35px;
-        height: 41px;
-        padding: 0 5px;
-        color: #007f00;
-        text-align: center;
-        border-left: 1px solid #efefef;
-        border-right: 1px solid #efefef;
-        border-top: 1px solid #efefef;
-        border-bottom: 1px solid #efefef;
-        background-color: #e9ecee;
-        border-radius: 10px;
-    }
-    
-    .quantity .input-text.qty:focus {
-        border: 1px solid #efefef;
-    }
-    
-    .quantity.red {
-        text-align: left;
-        position: relative;
-        white-space: nowrap;
-        vertical-align: top;
-        border: 1px solid red;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .quantity.buttons_added {
-        text-align: left;
-        position: relative;
-        white-space: nowrap;
-        vertical-align: top;
-        border: 1px solid #c6c7c7;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .quantity.buttons_added input {
-        display: inline-block;
-        margin: 0;
-        vertical-align: top;
-        box-shadow: none;
-        border-radius: 15px;
-    }
-    
-    .quantity.buttons_added .minus,
-    .quantity.buttons_added .plus {
-        padding: 7px 10px 8px;
-        height: 41px;
-        color: #007f00;
-        background-color: #e9ecee;
-        border: 1px solid #efefef;
-        cursor: pointer;
-    }
-    
-    .quantity.buttons_added .minus {
-        border-right: 0;
-    }
-    
-    .quantity.buttons_added .plus {
-        border-left: 0;
-    }
-    
-    .quantity.buttons_added .minus:hover,
-    .quantity.buttons_added .plus:hover {
-        background: #eeeeee;
-    }
-    
-    .quantity input::-webkit-outer-spin-button,
-    .quantity input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        margin: 0;
-    }
-    
-    .quantity.buttons_added .minus:focus,
-    .quantity.buttons_added .plus:focus {
-        outline: none;
-    }
-</style>
 
 
 <body>
 
-    <div class="container" style="margin-top: 20px; height: 70vh;">
-        <input checked="checked" id="tab1" type="radio" name="tab" data-tab="tab1" />
-        <input id="tab2" type="radio" name="tab" data-tab="tab2" />
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block">
+                <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
+            </a>
+            <button class="btn d-block d-lg-none d-md-block  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
+                class="navbar-toggler-icon"></span></button>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-4">
+                        <div class="input-group location">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control col-12" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary  px-5 ">
+                            <i class="fas fa-search icon-search"></i> Find Food
+                        </button>
+                    </li>
 
-        <nav style="margin-top: 10px;">
-            <label for="tab1" data-tab-label="tab1" role="tab">
-                <h4>Order Online</h4>
-            </label> <label for="tab2" data-tab-label="tab2" role="tab">
-                <h4>Review</h4>
-            </label>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage" > </i> Offers</a>
+                    </li>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
+                    </li>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
+                    </li>
 
 
-        </nav>
-        <style>
-            .categoary {
-                border: none;
-                background-color: white;
-                padding: 0;
-            }
-        </style>
+                </ul>
 
-        <nav class="navbar categoary navbar-expand-lg navbar-light bg-light d-block d-sm-block d-lg-none">
-            <div class="container-fluid" style="background-color: white;border: none;">
-                <a class="navbar-brand" href="#">Categoary</a>
-                <button class="navbar-toggler" type="button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                    <i class="fas fa-bars"></i>
-                </button>
-
-
-        </nav>
-        <style>
-            .top-offcanvas {
-                margin-top: 100px;
-                margin-bottom: 100px;
-                margin-left: 50px;
-                margin-right: 50px;
-                border-radius: 10px;
-            }
-            
-            .top-offcanvas .nav-link {
-                color: var(--primary-color);
-            }
-        </style>
-        <div class="offcanvas top-offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-            <div class="offcanvas-header">
-                <h5 id="offcanvasTopLabel">Categoarys</h5>
-                <a href="#" class="close-button" data-bs-dismiss="offcanvas" aria-label="Close"></a>
-
-            </div>
-            <div class="offcanvas-body">
-                <div class="col-2 order-list-group">
-                    <nav id="myScrollspy" style="border-style: none;">
-                        <ul class="nav nav-pills flex-column text-right">
-                            <li class="nav-item"><a class="nav-link " href="#content-Recommended">Recommended</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" onclick="scroll('#content-Family')" href="#content-Family">Family</a></li>
-                            <li class="nav-item"><a class="nav-link" id="combo" href="#content-combo">Combo</a></li>
-                        </ul>
-                    </nav>
-                </div>
             </div>
         </div>
-
-        <style>
-            .order-list-group {
-                border-style: none;
-            }
-            
-            .close-button {
-                padding: 10px;
-                height: 10px;
-                width: 10px;
-                position: relative;
-                box-sizing: border-box;
-                line-height: 40px;
-                display: inline-block;
-            }
-            
-            .close-button:before,
-            .close-button:after {
-                transform: rotate(-45deg);
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-top: -5px;
-                margin-left: -25px;
-                display: block;
-                height: 02px;
-                width: 30px;
-                background-color: #000;
-                transition: all 0.25s ease-out;
-            }
-            
-            .close-button:after {
-                transform: rotate(-135deg);
-            }
-            
-            .close-button:hover:before,
-            .close-button:hover:after {
-                transform: rotate(0deg);
-            }
-        </style>
-        <section data-tab-panel="tab1" role="tabpanel" aria-labelledby="tab1">
-            <div class="row">
-                <div class="col-2 order-list-group">
-                    <nav id="myScrollspy" style="border-style: none;">
-                        <ul class="nav nav-pills flex-column text-right d-none d-lg-block">
-                            <li class="nav-item"><a class="nav-link actives" href="#content-Recommended">Recommended</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" onclick="scroll('#content-Family')" href="#content-Family">Family</a></li>
-                            <li class="nav-item"><a class="nav-link" id="combo" href="#content-combo">Combo</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="col-md-10  orders">
-                    <div data-spy="" class="sroll-order" style="height: 65vh" data-target="#" data-offset="10">
-                        <h4 id="content-Recommended">Recommended</h4>
-                        <p>
-                            <div class="card ">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/13.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md" id="add">
-                                            <button type="button" class="btn" data-name="pizza" data-price="$40">Add
-                                    +</button>
+    </nav>
 
 
 
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
-                            <div class="card ">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/13.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md add">
-                                            <button class="btn" onclick="add(this)">Add +</button>
-                                        </div>
-
-                                        <script>
-                                            function add(element) {
-
-                                                $(element).parent().html('<div id="quantity" class="quantity buttons_added"> <input type="button" onclick="minus(this)" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" id="input" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" onclick="plus(this)" value="+"class="plus"></div></div>');
-                                            }
-
-                                            function plus(element) {
-
-                                                var a = document.getElementById('input').value
-                                                if (Number(a) >= 10) {
-                                                    $('.quantity buttons_added').removeClass('buttons_added')
-                                                    $('.quantity ').addClass('red')
-                                                    $('#input').val(10)
-                                                    $('#input').val(10)
-                                                } else if (Number(a) < 0) {
-                                                    $('.quantity buttons_added').removeClass('buttons_added')
-                                                    $('.quantity ').addClass('red')
-                                                    $('#input').val(0)
-                                                } else {
-                                                    $('#input').val(Number(a) + 1)
-                                                }
-                                            }
-
-                                            function minus(element) {
-
-                                                var a = document.getElementById('input').value
-
-                                                if (Number(a) == 0) {
-                                                    $('#input').val(Number(a) * 0)
-                                                } else if (Number(a) < 0) {
-                                                    $('.quantity buttons_added').removeClass('buttons_added')
-                                                    $('.quantity ').addClass('red')
-                                                    $('#input').val(0)
-                                                } else if (Number(a) > 10) {
-                                                    $('.quantity buttons_added').removeClass('buttons_added')
-                                                    $('.quantity ').addClass('red')
-                                                    $('#input').val(10)
-                                                } else {
-                                                    $('#input').val(Number(a) - 1)
-                                                }
-                                            }
-                                        </script>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <script>
-                            </script>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/15.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/16.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/17.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </p>
-                        <h4 id="content-Family">Family </h4>
-                        <p>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/13.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/14.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button type="button" class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/15.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/16.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/17.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </p>
-                        <h4 id="content-combo">Combo</h4>
-                        <p>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/13.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/14.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button type="button" class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/15.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/16.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md">
-                                            <img src="Assets/img/17.png" alt="" class="product-img">
-                                        </div>
-                                        <div class="col-md">
-                                            <h3>Italian Pizza</h3>
-                                            <div class="vote-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 46 votes</div>250
-                                            <br> <br> Macaroni, Onion, Capsicum and bell pepper.
-                                        </div>
-                                        <div class="col-md">
-                                            <button class="btn">Add +</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </section>
-        <section data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab1">
-            Second Tab Panel
-        </section>
-        <section data-tab-panel="tab3" role="tabpanel" aria-labelledby="tab1">
-            Third Tab Panel
-        </section>
-
-
-
+    <div class="offcanvas offcanvas-end text-center" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        <div class="offcanvas-body ">
+            <nav class="navbar navbar-light teal lighten-4">
+
+                <div>
 
 
+                    <ul class="navbar-nav mr-auto" style="font-size: 25px;">
+                        <div class="container">
+                            <li class="">
+                                <div class="input-group location">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input type="text" class="form-control " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </li>
+                            <li class="nav-item col-12">
+                                <button class="btn btn-primary  px-5 mt-3 mb-2">
+                                    <i class="fas fa-search icon-search"></i> Find Food
+                                </button>
+                            </li>
 
 
+                            <li class="nav-item mt-3 pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage" > </i> Offers</a>
+                            </li>
+                            <li class="nav-item mt-3  pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
+                            </li>
+                            <li class="nav-item mt-3  pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <!-- Links -->
+
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+        </div>
+    </div>
 
 </body>
 
 
 </html>
+<script src=" Assets/js/bootstrap.js "></script>
+
+<!-- Swiper JS -->
+<script src=" https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+<!-- Custom Js -->
+<script src=" Assets/js/main.js "></script>
