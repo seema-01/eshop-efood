@@ -16,10 +16,10 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".prev",
     },
 
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     breakpoints: {
         '@200': {
             slidesPerView: 1,
