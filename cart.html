@@ -33,36 +33,37 @@
 
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#"> <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block">
                 <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
             </a>
             <button class="btn d-block d-lg-none d-md-block  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
-                class="navbar-toggler-icon"></span></button>
+                    class="navbar-toggler-icon"></span></button>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item mx-4">
-                        <div class="input-group location">
-                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
-                            <input type="text" class="form-control col-12" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
+                    <li class="nav-item">
+                        <div class="input-group location mx-4 ">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-5">
                         <button class="btn btn-primary  px-5 ">
                             <i class="fas fa-search icon-search"></i> Find Food
                         </button>
                     </li>
 
                     <li class="nav-item mx-2 pt-1">
-                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage" > </i> Offers</a>
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage"> </i> Offers</a>
                     </li>
                     <li class="nav-item mx-2 pt-1">
-                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring"> </i> Help</a>
                     </li>
                     <li class="nav-item mx-2 pt-1">
-                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1"> </i> Cart</a>
                     </li>
 
 
@@ -82,15 +83,13 @@
         </div>
         <div class="offcanvas-body ">
             <nav class="navbar navbar-light teal lighten-4">
-
                 <div>
-
-
-                    <ul class="navbar-nav mr-auto" style="font-size: 25px;">
+                    <ul class="navbar-nav mr-auto">
                         <div class="container">
                             <li class="">
                                 <div class="input-group location">
-                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-map-marker-alt"></i></span>
                                     <input type="text" class="form-control " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </li>
@@ -102,13 +101,14 @@
 
 
                             <li class="nav-item mt-3 pt-1">
-                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage" > </i> Offers</a>
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage"> </i> Offers</a>
                             </li>
                             <li class="nav-item mt-3  pt-1">
-                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring" > </i> Help</a>
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring"> </i> Help</a>
                             </li>
                             <li class="nav-item mt-3  pt-1">
-                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1" > </i> Cart</a>
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1"> </i>
+                                    Cart</a>
                             </li>
                         </div>
                     </ul>
@@ -123,61 +123,62 @@
 
     <!-- End mobile navbar -->
 
-    <div class="container-fluid mt-4">
-        <div class="row ">
+    <div class="container-fluid mt-4 ">
+        <div class="row offset-md-1">
 
-            <div class="col-md-1">
 
-            </div>
 
-            <div class="col-md-7 left-border">
-                <div class="card profile">
-                    <div class="card-body">
+            <div class="col-md-8  border-start">
+
+                <div class="card profile mb-5 position-relative">
+                    <div class="position-absolute top-50 start-0 translate-middle "><i class="far fa-user cart-icon"></i></div>
+                    <div class="card-body ">
 
                         <div class="row">
 
-                            <div class="col-md">
+                            <div class="col-md-8">
                                 <img src="" alt="">
                                 <h1>Account</h1>
-                                <span style="color:#b4b6b7;"> To place your order ,log in to your existing account or sign up</span><br><br>
-                                <button class=" btn-scs mt-1 mb-2"><small>Have an account?</small> <br> <b>Log in</b></button>
+                                <span style="color:#b4b6b7;"> To place your order ,log in to your existing account or
+                                    sign up</span><br><br>
+                                <button class=" btn-scs mt-1 mb-2"><small>Have an account?</small> <br> <b>Log
+                                        in</b></button>
                                 <button class="btn-scs "><small>New you efood?</small> <br> <b>Sign up</b></button>
                             </div>
                             <div class="col-md-4">
-                                <img src="Assets/img/hot-dish.png" alt="" width="100%" style="margin-top: 50px;">
+                                <img src="Assets/img/hot-dish.png" alt="" class="img-fluid mt-5">
                             </div>
                         </div>
                     </div>
                 </div>
-                <br>
 
-                <div class="card profile">
+
+                <div class="card profile mb-5 position-relative">
+                    <div class="position-absolute top-50 start-0 translate-middle "><i class="fas fa-map-marker-alt cart-icon"></i></div>
+
                     <div class="card-body">
                         <h1 style="color:#b4b6b7;">Delivery Address</h1>
                     </div>
                 </div>
-                <br>
-                <div class="card profile">
+
+                <div class="card profile position-relative">
+                    <div class="position-absolute top-50 start-0 translate-middle "><i class="far fa-credit-card cart-icon"></i></div>
+
                     <div class="card-body">
                         <h1 style="color:#b4b6b7;">Payment</h1>
                     </div>
                 </div>
             </div>
-            <style>
-                .cart {
-                    border-style: none;
-                    background-color: #e9ecee;
-                }
-            </style>
-            <div class="col-md-4 mb-cart">
+
+            <div class="col-md-4 p-1">
                 <div class="card cart">
                     <div class="card-body">
                         <div class="col-md">
                             <div class="row">
-                                <div class="col-md-2">
-                                    <img src="assets/img/12.png" alt="" width="65px" style="border-radius: 10px;">
+                                <div class="col-4">
+                                    <img src="assets/img/12.png" alt="" class="img-fluid rounded">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-8">
                                     <h5><b>efood</b></h5>
                                     <small style="border-bottom: 1px solid black;">Time square</small>
                                 </div>
@@ -187,90 +188,85 @@
                         <div class="col-md" style="padding: 20px;">
                             <div class="row">
                                 <div class="col-4">
-                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
+                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza
+                                </div>
+
                                 <div class="col-5">
-                                    <div class="quantity buttons_added">
-                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
-                                            class="plus">
+
+                                    <div id="quantity" class="quantity buttons_added">
+                                        <button type="button" value="-" id="minus" onclick="minusQuantity(this)" class="minus">-</button>
+                                        <input type="number" min="1" max="10" name="quantity" value="0" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="" disabled>
+                                        <button type="button" value="+" id="plus" onclick="plusQuantity( this )" class="minus">+</button>
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <h5 class='mt-2'><b>$40</b></h5>
+                                <div class="col-3" data-price="40">
+                                    <h5 class='mt-2'><b>$0</b></h5>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza
+                                </div>
+
+                                <div class="col-5">
+
+                                    <div id="quantity" class="quantity buttons_added">
+                                        <button type="button" value="-" id="minus" onclick="minusQuantity(this)" class="minus">-</button>
+                                        <input type="number" min="1" max="10" name="quantity" value="0" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                                        <button type="button" value="+" id="plus" onclick="plusQuantity( this )" class="minus">+</button>
+                                    </div>
+                                </div>
+                                <div class="col-3" data-price="40">
+                                    <h5 class='mt-2'><b>$0</b></h5>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza
+                                </div>
+
+                                <div class="col-5">
+
+                                    <div id="quantity" class="quantity buttons_added">
+                                        <button type="button" value="-" id="minus" onclick="minusQuantity(this)" class="minus">-</button>
+                                        <input type="number" min="1" max="10" name="quantity" value="0" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                                        <button type="button" value="+" id="plus" onclick="plusQuantity( this )" class="minus">+</button>
+                                    </div>
+                                </div>
+                                <div class="col-3" data-price="40">
+                                    <h5 class='mt-2'><b>$0</b></h5>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-4">
-                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
+                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza
+                                </div>
+
                                 <div class="col-5">
-                                    <div class="quantity buttons_added">
-                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
-                                            class="plus">
+
+                                    <div id="quantity" class="quantity buttons_added">
+                                        <button type="button" value="-" id="minus" onclick="minusQuantity(this)" class="minus">-</button>
+                                        <input type="number" min="1" max="10" name="quantity" value="0" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                                        <button type="button" value="+" id="plus" onclick="plusQuantity( this )" class="minus">+</button>
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <h5 class='mt-2'><b>$40</b></h5>
+                                <div class="col-3" data-price="40">
+                                    <h5 class='mt-2'><b>$0</b></h5>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
-                                <div class="col-5">
-                                    <div class="quantity buttons_added">
-                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
-                                            class="plus">
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <h5 class='mt-2'><b>$40</b></h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="Assets/img/veg.png" alt="" width="30px"> Pizza </div>
-                                <div class="col-5">
-                                    <div class="quantity buttons_added">
-                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
-                                            class="plus">
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <h5 class='mt-2'><b>$40</b></h5>
-                                </div>
-                            </div>
-                            <style>
-                                .btn-sp-cooking-instruction {
-                                    background-color: white;
-                                    padding: 20px;
-                                    border-style: none;
-                                    border-radius: 10px;
-                                    color: #b4b6b7;
-                                }
-                            </style>
+
                             <div class="col-md">
-                                <button class="btn-sp-cooking-instruction col-md-12">Add Special Cooking Instruction</button>
+                                <button class="btn-sp-cooking-instruction col-md-12">Add Special Cooking
+                                    Instruction</button>
                             </div>
                         </div>
 
 
                     </div>
-                    <style>
-                        .support-rider {
-                            background-color: #f8f8f8;
-                            color: #7d7d7d;
-                        }
-                        
-                        .support-rider button {
-                            background-color: #f8f8f8;
-                            border: 1px solid #7d7d7d;
-                            padding: 6px;
-                            padding-left: 20px;
-                            padding-right: 20px;
-                            margin: 10px;
-                            border-radius: 10px;
-                            font-size: 18px;
-                            font-weight: bold;
-                        }
-                    </style>
+
                     <div class=" support-rider ">
                         <div class="card-12 con">
                             <div class="card-body ">
@@ -278,80 +274,57 @@
                                 Support your valet and make their day! 100% of your tip will be transferred to your valet.
                                 <br>
                                 <button>+20</button><button>+30</button><button>+50</button>
-
-
-
-
                                 <div id="cart-item">
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <style>
-                        .bill-details {
-                            background-color: #e9ecee;
-                            border-style: none;
-                        }
-                        
-                        .bill-details .promo-code {
-                            border-radius: 10px;
-                            border-style: none;
-                        }
-                        
-                        .bill-details .promo-code-img {
-                            position: relative;
-                            max-width: 70%;
-                        }
-                    </style>
+
 
                     <div class="card bill-details">
                         <div class="card-body">
                             <div class="container">
                                 <div class="position-relative">
                                     <input type="text" name="" class="form-control promo-code" id="" placeholder="Enter your promo code">
-
                                     <div class="position-absolute position-absolute top-50 end-0  translate-middle-y">
                                         <a href="#/"> <img src="Assets/svg/enter.svg" class="promo-code-img ms-5" alt=""></a>
                                     </div>
-
                                 </div>
-
-
                             </div>
 
                             <h6 class="mt-4"><b>Bill details</b> </h6>
                             <div class="row">
-                                <div class="col-md-10 ">
+                                <div class="col-8 ">
                                     item total
                                 </div>
-                                <div class="col-md-2">
-                                    $160
+                                <div class="col-4" id="total">
+                                    $0
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-10">
+                                <div class="col-8">
                                     Delivery partner Fee
                                 </div>
-                                <div class="col-md-2">
-                                    $50
+                                <div class="col-4">
+                                    $0
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-10">
+                                <div class="col-8">
                                     Taxes and Charges
                                 </div>
-                                <div class="col-md-2">
-                                    $5
+                                <div class="col-4">
+                                    $0
                                 </div>
                             </div>
                             <hr style="color: #000;height: 3px;">
                             <div class="row">
-                                <div class="col-md-10">
+                                <div class="col-8">
                                     <b>Taxes and Charges</b>
                                 </div>
-                                <div class="col-md-2">
-                                    $115
+                                <div class="col-4">
+                                    $0
                                 </div>
                             </div>
                         </div>

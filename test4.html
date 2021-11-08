@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Assets/img/log-favicon.png" type="image/x-icon">
+    <link rel="icon" href="Assets/img/favicon-logo.png" type="image/x-icon">
 
     <!-- Boostrap Css -->
     <link rel="stylesheet" href="Assets/css/bootstrap.css">
+
+    <!-- Jquery CDN -->
+    <script src=" https://code.jquery.com/jquery-3.6.0.js " integrity=" sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Open Sans|Oleo Script Swash Caps">
@@ -24,147 +27,298 @@
     <link rel="stylesheet" href="Assets/css/style.css">
 
 
-
     <title>Home | eShop - Online Food ordering</title>
 </head>
 
 
-<body>
+<body id="back_to_top">
     <!-- Header -->
-    <style>
-        .search-by-restaurant img {
-            border-radius: 60%;
-            /* max-width: 100%; */
-        }
-        
-        .search-by-restaurant b {
-            font-size: 0.8rem;
-        }
-        
-        .view-all {
-            color: #f27e3a;
-            text-decoration: none;
-            position: relative;
-        }
-        
-        .view-all:hover {
-            color: hsl(22, 97%, 45%);
-        }
-    </style>
-
-
-
-
-
-
-    <div class="container-fluid Features mb-5 mt-5 p-2">
-
-        <div class="container text-sm-center">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-4 dtd-border ">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="Assets/svg/icon01.svg " alt=" ">
-
-                                </div>
-                                <div class="col fw-bold">
-                                    <h3 class="mt-2 mt-md-4"> discount</h3>
-                                </div>
-                            </div>
+    <nav class="navbar navbar-expand-lg navbar-light align-middle">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block">
+                <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
+            </a>
+            <button class="btn d-block d-lg-none d-md-block  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
+                class="navbar-toggler-icon"></span></button>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mt-1 mb-lg-0 justify-content-center align-self-center">
+                    <li class="nav-item">
+                        <div class="input-group location mx-4 ">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
                         </div>
-                        <div class="col-4   dtd-border">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="Assets/svg/icon02.svg " alt=" ">
+                    </li>
+                    <li class="nav-item mx-5">
+                        <button class="btn btn-primary  px-5 ">
+                            <i class="fas fa-search icon-search"></i> Find Food
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-secondary mx-4 px-5 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Login
+                        </button>
 
-                                </div>
-                                <div class="col fw-bold">
-                                    <h3 class="mt-2 mt-md-4">Tracking</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4 ">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="Assets/svg/icon03.svg " alt=" ">
-
-                                </div>
-                                <div class="col fw-bold">
-                                    <h3 class="mt-2 mt-md-4">Delivery</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class=" container search-by-restaurant mt-5">
-            <div class="row mb-5">
-                <div class="col-6">
-                    <h3 style=" font-weight: bold; font-family: 'Sofia', sans-serif; ">
-                        Search by Restaurants</h3>
-                </div>
-                <div class="col-6 text-end">
-                    <a href="#/ " class="view-all">View All <i class="fas fa-angle-right "></i></a>
-
-                </div>
-            </div>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-secondary px-5" data-bs-toggle="modal" data-bs-target="#signup">
+                            Sign Up
+                        </button>
+                    </li>
 
 
-
-
-
-            <div class="container row text-center">
-                <div class="col-md-2 mb-5">
-                    <img src="Assets/img/18.png " width="50%">
-                    <br>
-                    <b>Pizza</b>
-                </div>
-                <div class="col-md-2 mb-5">
-                    <img src="Assets/img/19.png " width="50%"><br>
-                    <b>burger</b>
-                </div>
-                <div class="col-md-2 mb-5">
-                    <img src="Assets/img/20.png " width="50%"><br>
-                    <b>noodles</b>
-                </div>
-                <div class="col-md-2 mb-5">
-                    <img src="Assets/img/21.png " width="50%"><br>
-                    <b>subway</b>
-                </div>
-                <div class="col-md-2 mb-5">
-                    <img src="Assets/img/22.png " width="50%"><br>
-                    <b>chow mein</b>
-                </div>
-                <div class="col-md-2 mb-5">
-                    <img src="Assets/img/23.png " width="50%"><br>
-                    <b>Steak</b>
-                </div>
+                </ul>
 
             </div>
         </div>
+    </nav>
 
+
+    <div class="offcanvas offcanvas-end text-center" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+            <nav class="navbar navbar-light teal lighten-4">
+
+                <div>
+
+
+                    <ul class="navbar-nav mr-auto" style="font-size: 25px;">
+                        <div class="container">
+                            <li class="">
+                                <div class="input-group location">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input type="text" class="form-control " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </li>
+                            <li class="nav-item col-12">
+                                <button class="btn btn-primary  px-5 mt-2 mb-2">
+                                    <i class="fas fa-search icon-search"></i> Find Food
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-secondary mx-4 px-5 mt-2 mb-2 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Login
+                                </button>
+
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-secondary px-5 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#signup">
+                                    Sign Up
+                                </button>
+                            </li>
+
+                            <li class="nav-item">
+                                <div class="row filters">
+
+                                    <div class="col-md-8 " style="margin-top: 80px;">
+                                        <button class="btn"><i class="fas fa-sliders-h"></i> Filters</button>
+                                        <button class="btn">Rating 4.0+</button>
+
+                                        <button class="btn">Safe and Hygienic</button>
+
+                                        <button class="btn">Pure Veg</button>
+
+                                        <button class="btn"><i class="fas fa-arrows-alt-v"></i> Delivery Time</button>
+                                        <button class="btn">Great Offers</button>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                    <!-- Links -->
+
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+        </div>
+    </div>
+    <!-- End Header -->
+
+
+
+
+
+
+    <!-- Login -->
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="efood.html" method="GET">
+                        <input type="text" name="" class="form-control" id="">
+
+                        <br>
+                        <button class="btn btn-primary col-12 " type="submit"> Send OTP</button>
+                    </form>
+                    <hr>
+                    <button class="btn col-12">Continue with Email</button>
+                    <button class="btn col-12">Continue with Google</button>
+                </div>
+                <div class="modal-footer text-left">
+                    New to eFood ? <label for="" style="color:#f96120">Create account</label>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- End Login -->
+
+
+    <!-- Sign up Modal -->
+    <div class="modal fade " id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="" class="form-control" id="" placeholder="full name">
+                    <br>
+                    <input type="email" name="" class="form-control" id="" placeholder="email">
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked" style="font-size: 11px;">
+                            i agree to e food <span class="text-danger">Terms of service. Privacy Policy </span>and
+                            <span class="text-danger">Content Policies</span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary col-12 "> Send OTP</button>
+                    <hr>
+
+                    <button class="btn col-12">Continue with Google</button>
+                </div>
+                <div class="modal-footer text-left">
+                    New to eFood ? <label for="" style="color:#f96120">Create account</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Login -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block">
+                <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
+            </a>
+            <button class="btn d-block d-lg-none d-md-block  d-sm-block " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span
+                    class="navbar-toggler-icon"></span></button>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <div class="input-group location mx-4 ">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <button class="btn btn-primary  px-5 ">
+                            <i class="fas fa-search icon-search"></i> Find Food
+                        </button>
+                    </li>
+
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage"> </i> Offers</a>
+                    </li>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring"> </i> Help</a>
+                    </li>
+                    <li class="nav-item mx-2 pt-1">
+                        <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1"> </i> Cart</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
 
 
 
 
+    <div class="offcanvas offcanvas-end text-center" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+            <nav class="navbar navbar-light teal lighten-4">
+                <div>
+                    <ul class="navbar-nav mr-auto">
+                        <div class="container">
+                            <li class="">
+                                <div class="input-group location">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-map-marker-alt"></i></span>
+                                    <input type="text" class="form-control " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </li>
+                            <li class="nav-item col-12">
+                                <button class="btn btn-primary  px-5 mt-3 mb-2">
+                                    <i class="fas fa-search icon-search"></i> Find Food
+                                </button>
+                            </li>
 
-    <!-- Swiper -->
+
+                            <li class="nav-item mt-3 pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-percentage"> </i> Offers</a>
+                            </li>
+                            <li class="nav-item mt-3  pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-life-ring"> </i> Help</a>
+                            </li>
+                            <li class="nav-item mt-3  pt-1">
+                                <a class="nav-link fw-bold" href="#/"><i class="fas fa-shopping-cart mx-1"> </i>
+                                    Cart</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <!-- Links -->
+
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+        </div>
+    </div>
+
+    <!-- End mobile navbar -->
 
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-    <script src="Assets/js/main.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-    </script>
 </body>
 
 </html>
+
+<!-- Scripts -->
+
+
+<!-- Boostrap JavaScript -->
+<script src=" Assets/js/bootstrap.js "></script>
+
+<!-- Swiper JS -->
+<script src=" https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+<!-- Custom Js -->
+<script src=" Assets/js/main.js "></script>
+
+<!-- End Scripts -->

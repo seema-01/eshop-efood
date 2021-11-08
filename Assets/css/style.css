@@ -1,7 +1,38 @@
 /*
-1.  
-2. buttons
-3. 
+
+Pages
+1. index page
+2. Efood page
+3. cart page
+4. Error page
+
+=> 1.index page css
+
+    1.header
+    2.Favourite
+    3.How does work
+    4.popular item
+    5.Featured Restaurants 
+    6.Features
+    7.Best item 
+    8.our customer
+    9.Footer
+
+=> 2.Efood page css
+
+
+    1.seciton
+    2.item search
+    3.tabs
+
+
+=> cart page css
+
+    1.delivery details
+    2.quantity box
+    3.Support rider
+
+=> Error page
 
 media-queries
 1. 
@@ -15,10 +46,16 @@ media-queries
 
 /* Variables */
 
- :root {
+:root {
     --primary-color: #f96220;
     --white-color: #ffff;
-    --secondary-color: #c8c8c8;
+    --secondary-color: #f5f5f5;
+    --secondary-b-color: #d9d9d9;
+    --tab-border-color: #F3F4F6;
+    --tab-panel-background: #fff;
+    --tab-border-bottom-color: #9CA3AF;
+    --tab-border-bottom-width: 2px;
+    --tab-spacing: 1rem .5rem;
 }
 
 
@@ -57,13 +94,6 @@ media-queries
     box-shadow: none;
     border-color: #ced4da;
     background-color: var(--secondary-color);
-}
-
- :root {
-    --primary-color: #f96220;
-    --white-color: #ffff;
-    --secondary-color: #f5f5f5;
-    --secondary-b-color: #d9d9d9;
 }
 
 .btn-primary {
@@ -117,6 +147,12 @@ media-queries
     outline: 0;
     box-shadow: none;
 }
+
+
+/* End header */
+
+
+/* Favourite dish */
 
 .body-container {
     background-image: url('Assets/img/backround.png');
@@ -286,6 +322,9 @@ media-queries
 }
 
 
+/* End favourite dish */
+
+
 /* How Does Works  */
 
 .how-does-works {
@@ -317,6 +356,16 @@ media-queries
     filter: blur(2px);
     position: relative;
     right: 60px;
+    bottom: 30px;
+}
+
+.position-relative .berry {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    transform: rotate(30deg);
+    filter: blur(2px);
+    position: relative;
+    right: 90px;
     bottom: 30px;
 }
 
@@ -466,7 +515,7 @@ media-queries
 
 /* Features  */
 
-<style>.Features {
+.Features {
     position: relative;
     background-color: #fff1ea;
     background-image: linear-gradient(#fff, #ffebe1);
@@ -478,10 +527,10 @@ media-queries
 }
 
 .Features .card img {
-    width: 80%;
+    width: 60%;
 }
 
-.Features .card .col h3 {
+.Features .card h3 {
     color: #fb491e;
     position: relative;
 }
@@ -512,9 +561,6 @@ media-queries
 
 /* Best item */
 
-
-/* Best item */
-
 .best-item {
     margin-top: 50px;
     position: relative;
@@ -532,6 +578,9 @@ media-queries
     height: 100%;
     border-radius: 10px 10px 10px 10px;
 }
+
+
+/* our customer */
 
 .our-customer-container .swiper {
     width: 100%;
@@ -566,6 +615,14 @@ media-queries
     position: relative;
 }
 
+.card img {
+    max-width: 100%;
+}
+
+.card h3 {
+    font-size: 2vw;
+}
+
 .our-customer i {
     color: #f96220;
     margin-bottom: 20px;
@@ -579,6 +636,9 @@ media-queries
     font-family: 'Oleo Script Swash Caps';
     font-size: 25px;
 }
+
+
+/* Footer */
 
 footer {
     font-family: 'Open Sans';
@@ -646,14 +706,33 @@ footer .form-control:focus {
     border-color: #f96120;
 }
 
-section .row .col-2 .nav-link {
-    color: #f96224;
+
+/* End index page css */
+
+
+/* Efood page css */
+
+
+/* section */
+
+.section-nav .nav-link {
+    color: grey;
     font-weight: bold;
+    border-radius: 0px;
 }
 
-section .row .col-2 .nav-link:hover {
+.section-nav li a:hover {
     color: #f96224;
+    border-right: 2px solid #f96120;
 }
+
+.section-nav li.active>a {
+    color: var(--primary-color);
+    border-right: 2px solid #f96120;
+}
+
+
+/* Scroll */
 
 .sroll-order {
     height: 100px;
@@ -673,8 +752,7 @@ section .row .col-2 .nav-link:hover {
 
 .product-img {
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    width: 85%;
 }
 
 .orders button {
@@ -727,19 +805,6 @@ section .row .col-2 .nav-link:hover {
     color: #f96224;
 }
 
-.actives {
-    background-color: grey;
-    color: #f96224;
-}
-
- :root {
-    --tab-border-color: #F3F4F6;
-    --tab-panel-background: #fff;
-    --tab-border-bottom-color: #9CA3AF;
-    --tab-border-bottom-width: 2px;
-    --tab-spacing: 1rem .5rem;
-}
-
 .offers {
     position: relative;
     top: 40px;
@@ -747,76 +812,148 @@ section .row .col-2 .nav-link:hover {
     margin-right: 350px;
 }
 
-
-/* Preview Needs */
-
-
-/* Tabs Defaults */
-
-[data-tab] {
-    display: none;
+.categoary {
+    border: none;
+    background-color: white;
+    padding: 0;
 }
 
-[data-tab-panel] {
-    opacity: 0;
-    background-color: var(--tab-panel-background);
-    transition: opacity .3s ease-in-out;
-    visibility: hidden;
-    height: 0;
+
+/* mobile close button */
+
+.order-list-group {
+    border-style: none;
+}
+
+.order-list-group .nav-link {
+    color: var(--primary-color);
+}
+
+.close-button {
+    padding: 10px;
+    height: 10px;
+    width: 10px;
     position: relative;
-    z-index: 1;
+    box-sizing: border-box;
+    line-height: 40px;
+    display: inline-block;
 }
 
-nav {
-    border-bottom: 1px solid #D1D5DB;
-    display: flex;
+.close-button:before,
+.close-button:after {
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -25px;
+    display: block;
+    height: 02px;
+    width: 30px;
+    background-color: #000;
+    transition: all 0.25s ease-out;
 }
 
-[data-tab-label] {
-    padding: var(--tab-spacing, 0);
+.close-button:after {
+    transform: rotate(-135deg);
+}
+
+.close-button:hover:before,
+.close-button:hover:after {
+    transform: rotate(0deg);
+}
+
+
+/* Item search */
+
+.item-search {
     position: relative;
-    bottom: -1px;
-    background-color: var(--tab-background-color, none);
-    cursor: pointer;
-    border-top-left-radius: var(--tab-radius, 0);
-    border-top-right-radius: var(--tab-radius, 0);
-    border-bottom-width: var(--tab-border-bottom-width, 0);
-    border-bottom-style: solid;
-    border-bottom-color: transparent;
+    top: -20px;
 }
 
-[data-tab-label]:hover {
-    border-bottom-color: var(--tab-border-bottom-color);
+.item-search span {
+    background-color: white;
+    border-right: none;
+    border-radius: 8px;
+    border: none;
 }
 
-
-/* Tab Label Active State */
-
-[data-tab="tab1"]:checked~nav [data-tab-label="tab1"],
-[data-tab="tab2"]:checked~nav [data-tab-label="tab2"],
-[data-tab="tab3"]:checked~nav [data-tab-label="tab3"] {
-    --tab-background-color: #fff;
-    box-shadow: var(--tab-active-shadow, 0);
-    border-bottom-color: #f96122;
-    z-index: 10;
+.item-search i {
+    color: #c8c8c8;
 }
 
+.item-search input {
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+}
 
-/* Tab Panel Active State */
-
-[data-tab="tab1"]:checked~nav~[data-tab-panel="tab1"],
-[data-tab="tab2"]:checked~nav~[data-tab-panel="tab2"],
-[data-tab="tab3"]:checked~nav~[data-tab-panel="tab3"] {
-    opacity: 1;
-    visibility: visible;
-    padding: var(--tab-spacing);
-    border: 1px solid var(--tab-panel-border-color);
-    width: 100%;
-    height: auto;
+.item-search input:focus {
+    box-shadow: none;
+    border-color: #ced4da;
 }
 
 
-/* Cart */
+/* Tabs */
+
+.nav-tabs {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    z-index: 5;
+    background-color: white;
+    font-size: 20px;
+}
+
+.section-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 130px;
+    z-index: 5;
+}
+
+.nav-tabs .nav-item .nav-link {
+    color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.nav-tabs .nav-item .nav-link:hover {
+    border-bottom: 2px solid #f96120;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.nav-tabs .nav-item .nav-link:focus {
+    border-bottom: 2px solid #f96120;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.nav-tabs .nav-item .active {
+    border-bottom: 2px solid #f96120;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+/* Cart page css*/
+
+
+/* delivery details */
+
+.cart-icon {
+    background-color: black;
+    border-radius: 15%;
+    padding: 10px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
 .efood .card {
     padding: 50px;
@@ -863,46 +1000,6 @@ nav {
 .btn-scs:hover {
     background-color: #74ba5e;
     color: white;
-}
-
-.left-border {
-    border-left: 2px dashed #b4b6b7;
-    height: 590px;
-}
-
-
-/* .fa-user {
-            padding: 12px;
-            background-color: black;
-            color: white;
-            border-radius: 5px;
-            position: relative;
-            top: -520px;
-            left: 85px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        } */
-
-
-/* .fa-map-marker-alt {
-    padding: 12px;
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    position: relative;
-    top: -210px;
-    left: 42px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-} */
-
-.fa-credit-card {
-    padding: 12px;
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    position: relative;
-    top: -50px;
-    left: 0px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 
@@ -994,34 +1091,88 @@ nav {
 }
 
 
+/* Support rider */
+
+.cart {
+    border-style: none;
+    background-color: #e9ecee;
+}
+
+.support-rider {
+    background-color: #f8f8f8;
+    color: #7d7d7d;
+}
+
+.support-rider button {
+    background-color: #f8f8f8;
+    border: 1px solid #7d7d7d;
+    padding: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bill-details {
+    background-color: #e9ecee;
+    border-style: none;
+}
+
+.bill-details .promo-code {
+    border-radius: 10px;
+    border-style: none;
+}
+
+.bill-details .promo-code-img {
+    position: relative;
+    max-width: 70%;
+}
+
+.btn-sp-cooking-instruction {
+    background-color: white;
+    padding: 20px;
+    border-style: none;
+    border-radius: 10px;
+    color: #b4b6b7;
+}
+
+
+/* error page css */
+
+.unserviceabale-restuarants {
+    background-color: #e9ecee;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 10px;
+}
+
+.unserviceabale-restuarants .card img {
+    position: relative;
+    right: 30px;
+    border-radius: 8px;
+}
+
+.unserviceabale-restuarants .card {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
 /* Media Queries */
 
 
 /* xs devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
-    /* discount cards */
-    /* End discount cards */
-    /* Efood  */
-    .float-end {
-        margin-left: 10rem;
-    }
     .sroll-order {
-        height: 500px;
-        overflow-y: scroll;
-        padding: 5px;
         border-left: none;
-        scroll-behavior: smooth;
     }
-    .text-grey {
-        font-size: 9px;
-    }
-    /* End Efood */
-    /* Cart */
-    .mb-cart {
-        margin-top: 450px;
-    }
-    /* End Cart */
 }
 
 

@@ -33,7 +33,7 @@
 
 <body id="back_to_top">
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light align-middle">
+    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light align-middle">
         <div class="container">
             <a class="navbar-brand" href="#"> <img src="Assets/img/logo.PNG" alt="Eshop" class="d-none d-sm-none d-md-block d-lg-block">
                 <img src="Assets/img/logo.PNG" alt="Eshop" class="d-block d-sm-block d-md-none d-lg-none">
@@ -43,14 +43,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mt-1 mb-lg-0 justify-content-center align-self-center">
-                    <li class="nav-item mx-4 ">
-                        <div class="input-group location">
-                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
-                            <input type="text" class="form-control col-12" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
+                    <li class="nav-item">
+                        <div class="input-group location mx-4 ">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control" placeholder="Enter Your Address  " aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn btn-primary   px-5 ">
+                    <li class="nav-item mx-5">
+                        <button class="btn btn-primary  px-5 ">
                             <i class="fas fa-search icon-search"></i> Find Food
                         </button>
                     </li>
@@ -85,7 +86,7 @@
                 <div>
 
 
-                    <ul class="navbar-nav mr-auto" style="font-size: 25px;">
+                    <ul class="navbar-nav mr-auto">
                         <div class="container">
                             <li class="">
                                 <div class="input-group location">
@@ -113,7 +114,7 @@
                             <li class="nav-item">
                                 <div class="row filters">
 
-                                    <div class="col-md-8 " style="margin-top: 80px;">
+                                    <div class="col-md-8 mt-5">
                                         <button class="btn"><i class="fas fa-sliders-h"></i> Filters</button>
                                         <button class="btn">Rating 4.0+</button>
 
@@ -168,7 +169,7 @@
                     <button class="btn col-12">Continue with Google</button>
                 </div>
                 <div class="modal-footer text-left">
-                    New to eFood ? <label for="" style="color:#f96120">Create account</label>
+                    New to eFood ? <label class="text-danger">Create account</label>
                 </div>
             </div>
         </div>
@@ -203,7 +204,7 @@
                     <button class="btn col-12">Continue with Google</button>
                 </div>
                 <div class="modal-footer text-left">
-                    New to eFood ? <label for="" style="color:#f96120">Create account</label>
+                    New to eFood ? <label for="" class="text-danger">Create account</label>
                 </div>
             </div>
         </div>
@@ -235,7 +236,7 @@
 
             </div>
         </div>
-        <div class="row loved-dish">
+        <div class=" row  loved-dish">
             <div class="col-md-6 f-dish">
                 <h6><b>#1 Most loved dish</b></h6>
                 <h1>LAMB STEAK</h1>
@@ -255,7 +256,7 @@
 
         <div class="row">
             <div class=" col-md-4 col-sm-12 col-lg-4 mt-5">
-                <h5 class="Restaurants-name"><i class="fas fa-map-marker-alt " style="margin-right:10px;"></i> Food Land
+                <h5 class="Restaurants-name"><i class="fas fa-map-marker-alt "></i> Food Land
                 </h5>
             </div>
             <div class="col-md-8">
@@ -264,27 +265,31 @@
                         <button class="prev d-none d-sm-none d-md-block"><img src="Assets/svg/left-right.svg"
                                 class=" svg-left" alt="Eshop"></button>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 mb-5">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div>
                                         <img src="Assets/img/center05.png" alt="Eshop">
+                                        <h6 class="text-center">Cake</h6>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div>
                                         <img src="Assets/img/center06.png" alt="Eshop">
+                                        <h6 class="text-center">cheez burger</h6>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div>
                                         <img src="Assets/img/center07.png" alt="Eshop">
+                                        <h6 class="text-center">sand wich</h6>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div>
                                         <img src="Assets/img/center08.png" alt="Eshop">
+                                        <h6 class="text-center">milk cake</h6>
                                     </div>
                                 </div>
 
@@ -331,7 +336,7 @@
 
                         </div>
 
-                        <label style="font-weight: bold; ">Grey vegs</label>
+                        <label class="fw-bold">Grey vegs</label>
                         <br>
                         <div class="offer-end-days ">6 days remaining</div>
 
@@ -985,9 +990,16 @@
 
 
     <!-- Features & Search by restaurants -->
-    <div class="container-fluid Features mb-5 mt-5 p-2">
+    <div class="container-fluid Features mb-5 mt-5 p-2 position-relative">
+        <div class="position-relative ">
+            <div class="position-absolute top-0 start-0 barries " style="z-index: 0; ">
+                <img class="berry " src="Assets/img/2.png " alt=" " width="20% ">
+            </div>
+        </div>
 
-        <div class="container text-sm-center">
+
+        <div class="container text-sm-center p-5">
+
             <div class="card">
                 <div class="card-body">
                     <div class="row">
@@ -998,7 +1010,7 @@
 
                                 </div>
                                 <div class="col fw-bold">
-                                    <h3 class="mt-2 mt-md-4"> discount</h3>
+                                    <h3 class="mt-2 mt-md-4">discount</h3>
                                 </div>
                             </div>
                         </div>
@@ -1078,15 +1090,6 @@
     </div>
 
 
-    <style>
-        .card img {
-            max-width: 100%;
-        }
-        
-        .card h3 {
-            font-size: 2vw;
-        }
-    </style>
 
 
 
